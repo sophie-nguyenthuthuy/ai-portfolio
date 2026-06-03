@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & models (lớn — không commit)
+*.csv
+*.parquet
+*.tsv
+*.db
+*.sqlite
+data/
+datasets/
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.safetensors
+models/
+checkpoints/
+
+# Secrets
+.env
+*.key
+
+# MLOps / experiment artifacts
+mlruns/
+.dvc/cache
+wandb/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,59 @@
+# ── Core / Section 1-4: Python, data, math ──────────────────
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+scipy
+statsmodels
+jupyter
+ipykernel
+
+# ── Section 3: SQL ──────────────────────────────────────────
+duckdb
+SQLAlchemy
+
+# ── Section 5: Machine Learning ─────────────────────────────
+scikit-learn
+xgboost
+lightgbm
+catboost
+imbalanced-learn
+optuna
+
+# ── Section 6: Time Series ──────────────────────────────────
+prophet            # nặng; chỉ cài khi học Section 6
+
+# ── Section 7-8: Deep Learning / Computer Vision ────────────
+torch              # cài theo hướng dẫn pytorch.org cho đúng CUDA
+torchvision
+# tensorflow       # tuỳ chọn (Keras)
+albumentations
+opencv-python
+onnx
+onnxruntime
+
+# ── Section 9-12: NLP / GenAI / LLM / RAG ───────────────────
+transformers
+datasets
+sentence-transformers
+peft               # LoRA/QLoRA
+# bitsandbytes     # QLoRA 4-bit (Linux/GPU)
+accelerate
+langchain
+langgraph
+llama-index
+chromadb
+faiss-cpu
+rank-bm25
+ragas
+
+# ── Section 13-14: Agentic AI / MLOps ───────────────────────
+fastapi
+uvicorn
+streamlit
+gradio
+mlflow
+dvc
+evidently
+prometheus-client
