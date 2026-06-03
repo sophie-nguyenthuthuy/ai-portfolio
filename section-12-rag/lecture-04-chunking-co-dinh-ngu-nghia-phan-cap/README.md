@@ -2,69 +2,51 @@
 
 _Phần của: **Section 12: RAG & Vector Database**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 04
-- SECTION 12 · LECTURE 04
-- Chunking — cố định, ngữ nghĩa, phân cấp
-- ~7 phút · 5 slides
+- Document Chunking
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Tài liệu cắt thành mảnh.
+**🎤 Speaker note:** "Chunk sai = RAG hỏng. Bước bị xem nhẹ nhất."
 
-- L04 · CHUNKING
-- Vì sao chunk
+### Slide 2 — Vì sao chunk
+
 - Tài liệu dài quá context
-- Chunk = đơn vị tìm kiếm
-- Tài liệu dài
-- →
-- Cắt chunk
-- →
-- Đoạn nhỏ
+- Tìm đúng đoạn liên quan
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Tài liệu → chunks.
+**🎤 Speaker note:** Chunk = đơn vị tìm kiếm.
 
-- L04 · CHUNKING
-- Cố định vs ngữ nghĩa
-- Semantic giữ ngữ cảnh tốt hơn
-- FIXED
-- Cắt theo số token
-- đơn giản
-- dễ cắt đứt ý
-- SEMANTIC
-- Cắt theo nghĩa
-- giữ trọn ý
+### Slide 3 — Cố định vs ngữ nghĩa
 
-### Slide 4
+- Fixed: cắt theo số token
+- Semantic: cắt theo nghĩa
 
-- L04 · CHUNKING
-- Overlap & phân cấp
+**🎨 Visual:** `[Mermaid]` So sánh 2 cách.
+**🎤 Speaker note:** Semantic giữ ngữ cảnh tốt hơn.
+
+### Slide 4 — Overlap & phân cấp
+
 - Chồng lấn giữ ngữ cảnh
 - Parent-child chunk
-- …cuối chunk A
-- →
-- overlap
-- →
-- đầu chunk B…
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Chunk overlap.
+**🎤 Speaker note:** Overlap tránh cắt đứt ý giữa chừng.
 
-- L04 · CHUNKING — TÓM TẮT
-- Tóm tắt
-- fixed / semantic
-- overlap
-- phân cấp
-- BÀI TIẾP
-- Pipeline RAG cơ bản
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- fixed/semantic · overlap · phân cấp
+- Bài tiếp: pipeline RAG cơ bản →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ráp thành pipeline RAG hoàn chỉnh."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

@@ -2,82 +2,57 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~9 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 03
-- SECTION 13 · LECTURE 03
-- Nền tảng LangChain & LangGraph
-- ~9 phút · 6 slides
+- LangChain & LangGraph
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Các khối nối thành chuỗi/đồ thị.
+**🎤 Speaker note:** "Framework phổ biến nhất để xây ứng dụng LLM/agent."
 
-- L03 · LANGCHAIN & LANGGRAPH
-- LangChain
+### Slide 2 — LangChain
+
 - Nối LLM, prompt, tool, memory
 - Chain các bước
-- Prompt
-- →
-- LLM
-- →
-- Tool
-- →
-- Output
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Chain các component.
+**🎤 Speaker note:** Lắp ráp ứng dụng LLM nhanh.
 
-- L03 · LANGCHAIN & LANGGRAPH
-- Các thành phần
-- Models · Prompts · Chains
-- Tools · Memory
-- MODELS
-- LLM
-- PROMPTS
-- Template
-- CHAINS
-- Nối bước
-- TOOLS · MEMORY
-- Tool · nhớ
+### Slide 3 — Các thành phần
 
-### Slide 4
+- Models, Prompts, Chains, Tools, Memory
 
-- L03 · LANGCHAIN & LANGGRAPH
-- Hạn chế của chain tuyến tính
+**🎨 Visual:** `[Mermaid]` Các block LangChain.
+**🎤 Speaker note:** Tái dùng những gì đã học (prompt, tool).
+
+### Slide 4 — Hạn chế của chain tuyến tính
+
 - Khó rẽ nhánh, lặp, điều kiện
-- Agent cần luồng phức tạp hơn
-- Chain thẳng ✕ vòng lặp · điều kiện
-- agent cần rẽ nhánh và lặp — chain tuyến tính không đủ
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Chain thẳng vs cần vòng lặp.
+**🎤 Speaker note:** Agent cần luồng phức tạp hơn chain.
 
-- L03 · LANGCHAIN & LANGGRAPH
-- LangGraph
-- Agent dạng đồ thị trạng thái
+### Slide 5 — LangGraph
+
+- Mô hình agent dạng đồ thị trạng thái
 - Rẽ nhánh, lặp, điều kiện
-- State
-- ↓
-- Node: gọi LLM / tool
-- ↓
-- Điều kiện → rẽ nhánh / lặp
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` State graph.
+**🎤 Speaker note:** Kiểm soát luồng agent tốt hơn.
 
-- L03 · LANGCHAIN & LANGGRAPH — TÓM TẮT
-- Tóm tắt
-- LangChain
-- components
-- LangGraph state graph
-- BÀI TIẾP
-- LlamaIndex
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- LangChain · components · LangGraph
+- Bài tiếp: LlamaIndex →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới framework mạnh về truy xuất — LlamaIndex."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

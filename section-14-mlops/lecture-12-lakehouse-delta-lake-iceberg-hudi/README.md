@@ -2,70 +2,50 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 12
-- SECTION 14 · LECTURE 12
-- Lakehouse — Delta Lake, Iceberg, Hudi
-- ~7 phút · 5 slides
+- Kiến trúc Lakehouse
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Data lake + warehouse hợp nhất.
+**🎤 Speaker note:** "Kết hợp ưu điểm data lake và data warehouse."
 
-- L12 · LAKEHOUSE
-- Lake vs Warehouse vs Lakehouse
+### Slide 2 — Lake vs Warehouse vs Lakehouse
+
 - Lake: rẻ, linh hoạt, lộn xộn
 - Warehouse: cấu trúc, đắt
 - Lakehouse: cả hai
-- LAKE
-- Rẻ · linh hoạt
-- lộn xộn
-- WAREHOUSE
-- Cấu trúc
-- đắt
-- LAKEHOUSE
-- Cả hai
-- rẻ + tin cậy
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` 3 kiến trúc.
+**🎤 Speaker note:** Lakehouse là xu hướng hiện đại.
 
-- L12 · LAKEHOUSE
-- Bảng giao dịch (ACID)
-- Delta / Iceberg / Hudi thêm ACID cho lake
-- Tin cậy như warehouse, rẻ như lake
-- Data lake
-- →
-- + ACID
-- →
-- Delta · Iceberg · Hudi
+### Slide 3 — Bảng giao dịch (ACID)
 
-### Slide 4
+- Delta/Iceberg/Hudi thêm ACID cho lake
 
-- L12 · LAKEHOUSE
-- Tính năng chính
-- Time travel
-- Schema evolution
-- Time travel + schema evolution
-- quay lại trạng thái dữ liệu cũ · đổi schema an toàn
+**🎨 Visual:** `[Mermaid]` ACID trên lake.
+**🎤 Speaker note:** Tin cậy như warehouse, rẻ như lake.
 
-### Slide 5
+### Slide 4 — Tính năng chính
 
-- L12 · LAKEHOUSE — TÓM TẮT
-- Tóm tắt
-- lakehouse
-- Delta / Iceberg / Hudi
-- ACID
-- BÀI TIẾP
-- Streaming & CDC
-- →
+- Time travel, schema evolution
+
+**🎨 Visual:** `[Mermaid]` Time travel dữ liệu.
+**🎤 Speaker note:** Quay lại trạng thái dữ liệu cũ.
+
+### Slide 5 — Tóm tắt & chuyển bài
+
+- lakehouse · Delta/Iceberg/Hudi · ACID
+- Bài tiếp: streaming & CDC →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta xử lý dữ liệu thời gian thực."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

@@ -2,78 +2,57 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 06
-- SECTION 14 · LECTURE 06
-- Orchestration — Airflow, Prefect, Dagster
-- ~8 phút · 6 slides
+- Workflow Orchestration
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Pipeline tự động chạy theo lịch.
+**🎤 Speaker note:** "Tự động hoá: data → train → deploy chạy theo lịch."
 
-- L06 · ORCHESTRATION
-- Vì sao orchestration
+### Slide 2 — Vì sao orchestration
+
 - Không chạy thủ công từng bước
 - Lập lịch, retry, theo dõi
-- THỦ CÔNG
-- Chạy tay
-- dễ quên, dễ lỗi
-- TỰ ĐỘNG
-- Theo lịch
-- retry · theo dõi
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Thủ công vs tự động.
+**🎤 Speaker note:** Pipeline production phải tự chạy.
 
-- L06 · ORCHESTRATION
-- DAG
+### Slide 3 — DAG
+
 - Đồ thị các task phụ thuộc
 - Task → task → task
-- Ingest
-- →
-- Train
-- →
-- Deploy
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` DAG mẫu.
+**🎤 Speaker note:** Mỗi bước là 1 task trong DAG.
 
-- L06 · ORCHESTRATION
-- Airflow
+### Slide 4 — Airflow
+
 - Chuẩn ngành, lập lịch mạnh
-- Phổ biến nhất
-- SCREEN
-- Airflow UI: DAG dạng đồ thị, trạng thái từng task, lịch chạy & retry
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Airflow DAG UI.
+**🎤 Speaker note:** Phổ biến nhất, nhiều doanh nghiệp dùng.
 
-- L06 · ORCHESTRATION
-- Prefect & Dagster
+### Slide 5 — Prefect & Dagster
+
 - Hiện đại hơn, dev experience tốt
-- AIRFLOW
-- Chuẩn ngành
-- nhiều DN dùng
-- PREFECT · DAGSTER
-- Hiện đại
-- DX tốt hơn
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` So sánh.
+**🎤 Speaker note:** Lựa chọn mới, dễ dùng hơn.
 
-- L06 · ORCHESTRATION — TÓM TẮT
-- Tóm tắt
-- orchestration
-- DAG
-- Airflow / Prefect
-- BÀI TIẾP
-- CI/CD cho ML
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- orchestration · DAG · Airflow/Prefect
+- Bài tiếp: CI/CD →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta tự động test & deploy code ML."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

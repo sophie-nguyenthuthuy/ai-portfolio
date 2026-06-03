@@ -2,70 +2,52 @@
 
 _Phần của: **Section 12: RAG & Vector Database**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 01
-- SECTION 12 · LECTURE 01
-- Vì sao cần RAG? Giới hạn của LLM khi thiếu ngữ cảnh
-- ~7 phút · 5 slides
+- RAG — Retrieval-Augmented Generation
 
-### Slide 2
+**🎨 Visual:** `[AI image]` LLM + kho tài liệu.
+**🎤 Speaker note:** "Cách phổ biến nhất đưa LLM vào doanh nghiệp."
 
-- L01 · VÌ SAO RAG
-- Giới hạn của LLM
+### Slide 2 — Giới hạn của LLM
+
 - Không biết dữ liệu nội bộ
-- Kiến thức cũ (cutoff) · hay bịa
-- Không biết dữ liệu nội bộ
-- ↓
-- Kiến thức cũ — cutoff
-- ↓
-- Hallucination
+- Kiến thức cũ (cutoff)
+- Hay bịa (hallucination)
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` 3 giới hạn.
+**🎤 Speaker note:** Nối lại hallucination Section 11.
 
-- L01 · VÌ SAO RAG
-- Ý tưởng RAG
+### Slide 3 — Ý tưởng RAG
+
 - Tìm tài liệu liên quan
 - Đưa vào prompt làm ngữ cảnh
-- Retrieve
-- →
-- Augment
-- →
-- Generate
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Retrieve → augment → generate.
+**🎤 Speaker note:** "Mở sách ra trả lời" thay vì "nhớ mang máng".
 
-- L01 · VÌ SAO RAG
-- RAG vs Fine-tuning
-- ⚠️ Câu hỏi phỏng vấn kinh điển
-- RAG
-- Kiến thức cập nhật
-- rẻ, dễ cập nhật
-- grounding tài liệu
-- FINE-TUNE
-- Phong cách / kỹ năng
-- học văn phong
-- khó cập nhật
+### Slide 4 — RAG vs Fine-tuning
 
-### Slide 5
+- RAG: kiến thức cập nhật, rẻ
+- Fine-tune: phong cách, kỹ năng
 
-- L01 · VÌ SAO RAG — TÓM TẮT
-- Tóm tắt
-- giới hạn LLM
-- ý tưởng RAG
-- RAG vs fine-tune
-- BÀI TIẾP
-- Embeddings cho RAG
-- →
+**🎨 Visual:** `[Mermaid]` So sánh.
+**🎤 Speaker note:** ⚠️ Câu hỏi phỏng vấn kinh điển.
+
+### Slide 5 — Tóm tắt & chuyển bài
+
+- giới hạn LLM · ý tưởng RAG · vs fine-tune
+- Bài tiếp: embeddings →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta học công nghệ tìm tài liệu: embedding."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

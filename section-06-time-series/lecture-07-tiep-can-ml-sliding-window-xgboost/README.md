@@ -2,91 +2,57 @@
 
 _Phần của: **Section 6: Time Series — Dự báo chuỗi thời gian**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 07
-- SECTION 6 · LECTURE 7
-- Tiếp cận ML — sliding window + XGBoost
-- ~8 phút · 6 slides
+- Time-series như bài toán ML
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Cửa sổ trượt trên chuỗi.
+**🎤 Speaker note:** "Dùng lại XGBoost đã học cho dự báo."
 
-- SLIDING WINDOW
-- Biến time-series thành bài toán ML
+### Slide 2 — Sliding window
+
 - Dùng quá khứ làm feature dự đoán tương lai
-- Bước chuẩn bị quan trọng — cả cho LSTM sau này
-- y₍ₜ₋₃₎
-- →
-- y₍ₜ₋₂₎
-- →
-- y₍ₜ₋₁₎
-- →
-- ŷ₍ₜ₎
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Cửa sổ trượt tạo mẫu.
+**🎤 Speaker note:** Bước chuẩn bị quan trọng (cả cho LSTM sau).
 
-- FEATURES
-- Feature từ thời gian
-- features.py
-- for lag in [1, 7, 14 ]:
-- df[f
-- "lag_{lag}"] = df["y" ].shift(lag)
-- df[
-- "roll7"] = df["y"].shift(1).rolling(7 ).mean()
-- df[
-- "dow" ]   = df.index.dayofweek
-- df[
-- "month"] = df.index.month
-- lag & rolling mean
-- ngày / tháng / thứ trong tuần
-- Nối lại feature engineering Section 2
+### Slide 3 — Feature từ thời gian
 
-### Slide 4
+- lag, rolling mean, ngày/tháng/thứ
 
-- XGBOOST
-- Huấn luyện XGBoost cho dự báo
-- xgb.py
-- from xgboost import  XGBRegressor
-- model = XGBRegressor(n_estimators=
-- 400, max_depth=4 )
-- model.fit(X_train, y_train)
-- pred = model.predict(X_test)
-- Đưa lag features vào XGBoost
-- Bắt quan hệ phi tuyến tốt hơn ARIMA
+**🎨 Visual:** `[Screen]` Tạo lag features.
+**🎤 Speaker note:** Nối lại feature thời gian Section 2.
 
-### Slide 5
+### Slide 4 — Train XGBoost
 
-- BACKTESTING
-- Đánh giá đúng với TimeSeriesSplit
-- fold 1
-- fold 2
-- fold 3
-- fold 4
-- fold 5
-- train (quá khứ)
-- test (tương lai)
-- ⚠ Lỗi kinh điển: shuffle dữ liệu time-series. Tập test phải luôn nằm sau tập train.
+- Đưa feature vào XGBoost
+- So với ARIMA
 
-### Slide 6
+**🎨 Visual:** `[Screen]` XGBoost dự báo.
+**🎤 Speaker note:** Bắt được quan hệ phi tuyến tốt hơn ARIMA.
 
-- SECTION 6 · LECTURE 7
-- Tóm tắt & chuyển bài
-- ĐÃ HỌC TRONG BÀI NÀY
-- sliding window
-- lag features
-- TimeSeriesSplit
-- BÀI TIẾP THEO
-- →
-- LSTM & GRU
+### Slide 5 — Backtesting
+
+- TimeSeriesSplit (không xáo trộn)
+- Vì sao split ngẫu nhiên là SAI
+
+**🎨 Visual:** `[Mermaid]` TimeSeriesSplit.
+**🎤 Speaker note:** ⚠️ Lỗi kinh điển: shuffle dữ liệu time-series.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- sliding window · lag features · backtesting
+- Bài tiếp: LSTM & GRU →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta dùng deep learning cho chuỗi dài."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

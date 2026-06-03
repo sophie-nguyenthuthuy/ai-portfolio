@@ -2,96 +2,57 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 01
-- SECTION 13 · LECTURE 01
-- "Agent" là gì? Vòng lặp nghĩ → hành động → quan sát
-- ~8 phút · 6 slides
+- Agentic AI — AI tự hành động
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Robot AI tự làm việc.
+**🎤 Speaker note:** "Bước tiến lớn 2026: AI không chỉ trả lời mà tự HÀNH ĐỘNG."
 
-- L01 · AGENT CƠ BẢN
-- Chatbot vs Agent
-- Chatbot: hỏi-đáp một lượt
+### Slide 2 — Chatbot vs Agent
+
+- Chatbot: hỏi-đáp 1 lượt
 - Agent: tự lập kế hoạch, dùng tool, lặp
-- CHATBOT
-- Một lượt
-- hỏi → đáp
-- không hành động
-- AGENT
-- Tự hành động
-- lập kế hoạch
-- dùng tool · lặp
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` So sánh.
+**🎤 Speaker note:** Agent = LLM + tool + vòng lặp + bộ nhớ.
 
-- L01 · AGENT CƠ BẢN
-- Vòng lặp agent
+### Slide 3 — Vòng lặp agent
+
 - Nghĩ → Hành động → Quan sát → lặp lại
-- Nối lại ReAct (Section 11)
-- Nghĩ
-- →
-- Hành động
-- →
-- Quan sát
-- →
-- ↻
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Vòng lặp think-act-observe.
+**🎤 Speaker note:** Nối lại ReAct (Section 11).
 
-- L01 · AGENT CƠ BẢN
-- Thành phần một agent
-- LLM (não) + Tools (tay)
-- Memory + Planner
-- LLM
-- Não
-- suy luận, quyết định
-- TOOLS
-- Tay
-- gọi API, code
-- MEMORY
-- Trí nhớ
-- ngắn & dài hạn
-- PLANNER
-- Kế hoạch
-- chia nhỏ task
+### Slide 4 — Thành phần một agent
 
-### Slide 5
+- LLM (não) + Tools (tay) + Memory + Planner
 
-- L01 · AGENT CƠ BẢN
-- Ứng dụng agent
+**🎨 Visual:** `[Mermaid]` Kiến trúc agent.
+**🎤 Speaker note:** Mỗi phần một vai trò.
+
+### Slide 5 — Ứng dụng agent
+
 - Trợ lý nghiên cứu, coding, CSKH
 - Tự động hoá quy trình
-- RESEARCH
-- Nghiên cứu
-- tìm & tổng hợp
-- CODING
-- Lập trình
-- viết & sửa code
-- CSKH
-- Chăm sóc KH
-- trả lời & xử lý
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` Các use case.
+**🎤 Speaker note:** Đây là hướng AI Engineer đang đi.
 
-- L01 · AGENT CƠ BẢN — TÓM TẮT
-- Tóm tắt
-- agent
-- vòng lặp think–act–observe
-- thành phần
-- BÀI TIẾP
-- Các pattern thiết kế agent
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- agent · vòng lặp · thành phần
+- Bài tiếp: các pattern agent →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta học các kiểu thiết kế agent."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

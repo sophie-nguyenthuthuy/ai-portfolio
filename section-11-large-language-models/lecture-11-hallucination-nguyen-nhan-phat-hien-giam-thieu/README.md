@@ -2,77 +2,59 @@
 
 _Phần của: **Section 11: Large Language Models**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 11
-- SECTION 11 · LECTURE 11
-- Hallucination — nguyên nhân, phát hiện, giảm thiểu
-- ~8 phút · 6 slides
+- Hallucination — khi LLM "bịa"
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Model nói tự tin nhưng sai.
+**🎤 Speaker note:** "Vấn đề nguy hiểm nhất khi đưa LLM vào sản phẩm."
 
-- L11 · HALLUCINATION
-- Hallucination là gì
+### Slide 2 — Hallucination là gì
+
 - Tạo thông tin sai một cách tự tin
-- Nguy hiểm vì nghe rất thuyết phục
-- Câu trả lời sai trông rất thật
-- tự tin nhưng không có thật
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Câu trả lời sai trông thật.
+**🎤 Speaker note:** Nguy hiểm vì nghe rất thuyết phục.
 
-- L11 · HALLUCINATION
-- Nguyên nhân
+### Slide 3 — Nguyên nhân
+
 - Model đoán token, không "biết"
-- Thiếu kiến thức / ngữ cảnh
-- Đoán token
-- →
-- Thiếu ngữ cảnh
-- →
-- Bịa thông tin
+- Thiếu kiến thức/ngữ cảnh
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Nguyên nhân.
+**🎤 Speaker note:** Bản chất "đoán từ tiếp theo" gây ra.
 
-- L11 · HALLUCINATION
-- Giảm thiểu
+### Slide 4 — Giảm thiểu
+
 - Grounding bằng RAG
-- Yêu cầu trích dẫn nguồn · hạ temperature
-- Grounding bằng RAG
-- ↓
 - Yêu cầu trích dẫn nguồn
-- ↓
 - Hạ temperature
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Các biện pháp.
+**🎤 Speaker note:** RAG là vũ khí chính — section sau.
 
-- L11 · HALLUCINATION
-- Phát hiện
+### Slide 5 — Phát hiện
+
 - Kiểm tra chéo nguồn
 - Self-consistency
-- Sinh nhiều câu trả lời
-- →
-- So khớp
-- →
-- Lệch = nghi ngờ
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` Cross-check.
+**🎤 Speaker note:** Tự động phát hiện vẫn là bài toán mở.
 
-- L11 · HALLUCINATION — TÓM TẮT
-- Tóm tắt
-- hallucination
-- nguyên nhân
-- giảm thiểu
-- BÀI TIẾP
-- Tối ưu chi phí LLM
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- hallucination · nguyên nhân · giảm thiểu
+- Bài tiếp: tối ưu chi phí →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta làm LLM rẻ & nhanh hơn."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

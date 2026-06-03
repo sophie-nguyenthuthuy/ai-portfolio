@@ -2,87 +2,57 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~9 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 10
-- SECTION 14 · LECTURE 10
-- Kubernetes cho ML — K8s cơ bản, Kubeflow, KServe
-- ~9 phút · 6 slides
+- Kubernetes cho ML
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Cụm container được điều phối.
+**🎤 Speaker note:** "Khi cần chạy nhiều container, tự co giãn — đó là K8s."
 
-- L10 · KUBERNETES
-- Vì sao Kubernetes
+### Slide 2 — Vì sao Kubernetes
+
 - Tự co giãn, tự phục hồi
 - Quản lý nhiều container
-- 1 CONTAINER
-- Docker
-- chạy đơn lẻ
-- NHIỀU CONTAINER
-- Kubernetes
-- co giãn · phục hồi
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` K8s điều phối pods.
+**🎤 Speaker note:** Chuẩn ngành cho hệ thống lớn.
 
-- L10 · KUBERNETES
-- Khái niệm cơ bản
+### Slide 3 — Khái niệm cơ bản
+
 - Pod, Deployment, Service
-- ĐƠN VỊ NHỎ NHẤT
-- Pod
-- →
-- QUẢN LÝ POD
-- Deployment
-- →
-- EXPOSE
-- Service
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Kiến trúc K8s.
+**🎤 Speaker note:** Pod = đơn vị nhỏ nhất chạy container.
 
-- L10 · KUBERNETES
-- Autoscaling
-- Tự tăng / giảm theo tải
-- Tiết kiệm chi phí + chịu tải
-- Tải cao
-- →
-- + Pod
-- →
-- Tải thấp
-- →
-- − Pod
+### Slide 4 — Autoscaling
 
-### Slide 5
+- Tự tăng/giảm theo tải
 
-- L10 · KUBERNETES
-- Kubeflow & KServe
+**🎨 Visual:** `[Mermaid]` Tải cao → thêm pod.
+**🎤 Speaker note:** Tiết kiệm chi phí + chịu tải.
+
+### Slide 5 — Kubeflow & KServe
+
 - Kubeflow: ML platform trên K8s
 - KServe: serve model trên K8s
-- KUBEFLOW
-- ML platform
-- pipeline trên K8s
-- KSERVE
-- Serving
-- serve model
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` ML trên K8s.
+**🎤 Speaker note:** Đây là nội dung talk "AI Inference trên K8s" của chị.
 
-- L10 · KUBERNETES — TÓM TẮT
-- Tóm tắt
-- K8s
-- pod / deployment
-- autoscale
-- Kubeflow / KServe
-- BÀI TIẾP
-- Cloud ML platforms
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- K8s · pod/deployment · autoscale · Kubeflow/KServe
+- Bài tiếp: cloud platforms →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta xem các nền tảng cloud."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

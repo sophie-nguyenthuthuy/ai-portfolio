@@ -23,4 +23,9 @@
 13. [p-value, sai lầm loại I/II, t-test, chi-square](lecture-13-p-value-sai-lam-loai-i-ii-t-test-chi-square/README.md) — 6 slides
 14. [EDA Project — Titanic + dữ liệu BĐS Việt Nam](lecture-14-eda-project-titanic-du-lieu-bds-viet-nam/README.md) — 7 slides
 
+## Practice
+
+- 🧪 Quiz: [section-04-quiz](../practice/quizzes/section-04-quiz.md)
+- 📝 Assignment: [assignment-04-thong-ke-titanic.ipynb](../practice/assignments/assignment-04-thong-ke-titanic.ipynb)
+
 _← [Về trang khoá học](../README.md)_

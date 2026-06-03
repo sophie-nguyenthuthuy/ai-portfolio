@@ -1,141 +1,68 @@
-# Section 2 · Lecture 3 — Vòng Lặp — for, while, Comprehension & Generator
+# Section 2 · Lecture 3 — Vòng lặp — for, while, comprehension, generator
 
 _Phần của: **Section 2: Python cho Data Science**_
 
-**Số slide:** 7
+**Số slide:** 7 · ~10 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- LECTURE
-- 03
-- ~10 phút
-- SECTION 2 — PYTHON CHO DATA SCIENCE
-- Vòng Lặp — for, while, Comprehension & Generator
-- for
-- while
-- break / continue
-- List Comprehension
-- Generator
+- Tự động hoá việc lặp đi lặp lại
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Vòng tròn lặp / băng chuyền.
+**🎤 Speaker note:** "Máy tính giỏi nhất ở việc lặp — đừng làm thủ công."
 
-- Vòng Lặp for
-- Lặp qua
-- list, tuple, chuỗi, range
-- Dùng khi biết trước số lần hoặc có tập để duyệt
-- range(start, stop, step)
-- — sinh dãy số
-- enumerate()
-- — lấy cả index và giá trị
-- zip()
-- — lặp song song 2 danh sách
-- for_loop.py
-- sp = ["Laptop", "Phone", "Tablet"] for item in sp :
-- print(item) # range — dãy số for i in range(1, 6 ):
-- print(i)    # 1 2 3 4 5 # enumerate — kèm index for i, ten in enumerate(sp ):
-- print(i, ten) # zip — song song 2 list for n, g in zip(sp, [999,599,399 ]):
-- print(n, g)
+### Slide 2 — Vòng lặp for
 
-### Slide 3
+- Lặp qua list, range, chuỗi
+- `for item in collection:`
 
-- Vòng Lặp while
-- Lặp khi
-- điều kiện còn đúng
-- Dùng khi không biết trước số lần lặp
-- ⚠️ Phải có điều kiện thoát — tránh vòng lặp vô hạn
-- Phổ biến: retry logic, đọc streaming data
-- Kiểm tra điều kiện
-- ↓ True
-- Chạy block
-- ↑ Lặp lại
-- ↓ False
-- Thoát vòng lặp
-- while_loop.py
-- n = 1 while n <= 5 :
-- print(n )
-- n += 1     # 1 2 3 4 5 # Retry logic thực tế so_lan = 0 while so_lan < 3 :
-- ket_qua = goi_api ()
-- if ket_qua.ok :
-- break      # thoát khi OK     so_lan += 1 # Vòng lặp daemon while True :
-- data = doc_stream ()
-- if not data: break
+**🎨 Visual:** `[Screen]` for lặp qua list.
+**🎤 Speaker note:** Dùng khi biết trước số lần lặp / có tập để duyệt.
 
-### Slide 4
+### Slide 3 — Vòng lặp while
 
-- break & continue
-- break
-- —
-- thoát ngay
-- khỏi vòng lặp
-- continue
-- —
-- bỏ qua
-- lượt hiện tại, tiếp tục lặp
-- Dùng để lọc dữ liệu, tìm kiếm sớm
-- Tránh lạm dụng — khó đọc khi lồng sâu
-- break_continue.py
-- # break — tìm phần tử đầu tiên > 5 for n in [3, 7, 2, 9, 4 ]:
-- if n > 5 :
-- print("Tìm thấy:", n)  # 7         break # continue — bỏ số chẵn for i in range(1, 9 ):
-- if i % 2 == 0 :
-- continue     print(i, end=" ")   # 1 3 5 7 # Lọc dữ liệu hợp lệ for row in du_lieu :
-- if row["gia"] is None :
-- continue     xu_ly(row)
+- Lặp khi điều kiện còn đúng
+- Cẩn thận vòng lặp vô hạn
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Flowchart while.
+**🎤 Speaker note:** Dùng khi không biết trước số lần lặp.
 
-- List Comprehension
-- Viết vòng lặp gọn trong
-- 1 dòng
-- Nhanh hơn for thông thường ~30–50%
-- Cú pháp:
-- [expr for x in tập if điều_kiện]
-- Dict & set comprehension cũng tương tự
-- 💡
-- Rất phổ biến trong Pandas: tạo cột mới, lọc dữ liệu theo điều kiện
-- comprehension.py
-- nums = [1, 2, 3, 4, 5] # For thông thường kq = [] for x in nums :
-- kq.append(x**2) # List comprehension — 1 dòng kq = [x**2 for x in nums] # [1, 4, 9, 16, 25] # Kèm điều kiện chan = [x for x in nums if x%2==0] # Dict comprehension bang = {x: x**2 for x in nums}
+### Slide 4 — break & continue
 
-### Slide 6
+- `break`: thoát vòng lặp
+- `continue`: bỏ qua lượt hiện tại
 
-- Generator — Lazy Evaluation
-- Sinh giá trị
-- lười (lazy)
-- — không tính trước toàn bộ
-- Dùng
-- yield
-- thay
-- return
-- Quan trọng: streaming data, pipeline ML lớn
-- List — vào RAM hết
-- 1M phần tử → ~8MB
-- Generator — sinh dần
-- 1M phần tử → ~200B
-- generator.py
-- def binh_phuong(n ):
-- for x in range(n ):
-- yield x**2   # sinh từng giá trị # Dùng như for bình thường for val in binh_phuong(1_000_000 ):
-- xu_ly(val)   # tiết kiệm RAM # Generator expression gen = (x**2 for x in range(10)) next(gen)  # 0 next(gen)   # 1 # So sánh RAM lst = [x**2 for x in range(10)]   # list gen = (x**2 for x in range(10))   # gen
+**🎨 Visual:** `[Screen]` Ví dụ break/continue.
+**🎤 Speaker note:** Điều khiển luồng lặp linh hoạt.
 
-### Slide 7
+### Slide 5 — List comprehension
 
-- LECTURE 03 — TÓM TẮT
-- Vòng Lặp
-- for — duyệt tập hợp · range · enumerate · zip
-- while — lặp theo điều kiện, cần điều kiện thoát
-- break / continue — điều khiển luồng lặp
-- List comprehension — Pythonic, nhanh hơn
-- Generator + yield — lazy, tiết kiệm bộ nhớ
-- →
-- Bài tiếp: Hàm, Scope, Lambda & Decorator
+- Viết vòng lặp gọn trong 1 dòng
+- `[x**2 for x in arr if x > 0]`
+
+**🎨 Visual:** `[Screen]` So sánh for thường vs comprehension.
+**🎤 Speaker note:** Pythonic, nhanh — dùng cực nhiều trong data.
+
+### Slide 6 — Generator
+
+- Sinh giá trị lười (lazy), tiết kiệm bộ nhớ
+- `yield` thay vì `return`
+
+**🎨 Visual:** `[Mermaid]` So sánh list (giữ hết) vs generator (sinh dần).
+**🎤 Speaker note:** Quan trọng khi xử lý dữ liệu lớn.
+
+### Slide 7 — Tóm tắt & chuyển bài
+
+- for · while · comprehension · generator
+- Bài tiếp: hàm & module →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta đóng gói code thành hàm dùng lại."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

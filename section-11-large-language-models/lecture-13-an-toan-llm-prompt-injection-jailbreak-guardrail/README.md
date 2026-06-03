@@ -2,69 +2,50 @@
 
 _Phần của: **Section 11: Large Language Models**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 13
-- SECTION 11 · LECTURE 13
-- An toàn LLM — prompt injection, jailbreak, guardrail
-- ~7 phút · 5 slides
+- An toàn LLM
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Lá chắn bảo vệ LLM.
+**🎤 Speaker note:** "Đưa LLM ra sản phẩm = phải lo bảo mật."
 
-- L13 · AN TOÀN LLM
-- Prompt injection
+### Slide 2 — Prompt injection
+
 - Người dùng chèn lệnh độc
 - Ghi đè system prompt
-- Như SQL injection — nhưng cho LLM
-- "Bỏ qua hướng dẫn trên và…"
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Lệnh độc trong input.
+**🎤 Speaker note:** Như SQL injection nhưng cho LLM.
 
-- L13 · AN TOÀN LLM
-- Jailbreak
+### Slide 3 — Jailbreak
+
 - Lừa model phá vỡ giới hạn an toàn
-- Trò "mèo vờn chuột" liên tục
-- Prompt lừa
-- →
-- Bypass guardrail
-- →
-- Nội dung cấm
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Bypass guardrail.
+**🎤 Speaker note:** Trò "mèo vờn chuột" liên tục.
 
-- L13 · AN TOÀN LLM
-- Guardrail
-- Lọc input / output
-- Kiểm duyệt, validate — nhiều lớp
-- Input
-- →
-- Guardrail
-- →
-- LLM
-- →
-- Guardrail
-- →
-- Output
+### Slide 4 — Guardrail
 
-### Slide 5
+- Lọc input/output
+- Kiểm duyệt, validate
 
-- L13 · AN TOÀN LLM — TÓM TẮT
-- Tóm tắt
-- prompt injection
-- jailbreak
-- guardrail
-- BÀI TIẾP
-- Mini-Project — QLoRA
-- →
+**🎨 Visual:** `[Mermaid]` Guardrail bao quanh LLM.
+**🎤 Speaker note:** Nhiều lớp phòng thủ.
+
+### Slide 5 — Tóm tắt & chuyển bài
+
+- injection · jailbreak · guardrail
+- Bài tiếp: Mini-Project QLoRA →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ráp tất cả: fine-tune LLM thật."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

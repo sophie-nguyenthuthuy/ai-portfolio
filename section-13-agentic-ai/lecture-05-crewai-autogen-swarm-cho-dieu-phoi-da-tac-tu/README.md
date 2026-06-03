@@ -2,84 +2,58 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 05
-- SECTION 13 · LECTURE 05
-- CrewAI, AutoGen, Swarm cho điều phối đa tác tử
-- ~8 phút · 6 slides
+- Multi-Agent Systems
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Nhóm agent cộng tác.
+**🎤 Speaker note:** "Chia việc lớn cho nhiều agent chuyên môn."
 
-- L05 · MULTI-AGENT
-- Vì sao multi-agent
+### Slide 2 — Vì sao multi-agent
+
 - Mỗi agent một vai trò
 - Phối hợp giải bài toán phức tạp
-- Manager
-- ↓
-- Agent nghiên cứu
-- ↓
-- Agent viết · Agent kiểm tra
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Manager → các agent con.
+**🎤 Speaker note:** Giống một team người: mỗi người một việc.
 
-- L05 · MULTI-AGENT
-- CrewAI
-- Agent có role, nhiệm vụ
+### Slide 3 — CrewAI
+
+- Agent có vai trò (role), nhiệm vụ
 - Dễ tổ chức team
-- RESEARCHER
-- Tìm thông tin
-- WRITER
-- Viết nội dung
-- REVIEWER
-- Kiểm tra
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Crew với roles.
+**🎤 Speaker note:** Trực quan như lập team.
 
-- L05 · MULTI-AGENT
-- AutoGen
+### Slide 4 — AutoGen
+
 - Agent hội thoại với nhau
-- Linh hoạt, mạnh (Microsoft)
-- Agent A
-- →
-- ⇄
-- →
-- Agent B
+- Linh hoạt, mạnh
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Agent conversation.
+**🎤 Speaker note:** Của Microsoft, mạnh cho hội thoại đa agent.
 
-- L05 · MULTI-AGENT
-- Pattern phối hợp
+### Slide 5 — Pattern phối hợp
+
 - Tuần tự, phân cấp, tranh luận
-- SEQUENTIAL
-- Tuần tự
-- A → B → C
-- HIERARCHICAL
-- Phân cấp
-- manager điều phối
-- DEBATE
-- Tranh luận
-- phản biện → chốt
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` Các pattern phối hợp.
+**🎤 Speaker note:** Chọn theo bài toán.
 
-- L05 · MULTI-AGENT — TÓM TẮT
-- Tóm tắt
-- CrewAI
-- AutoGen
-- pattern phối hợp
-- BÀI TIẾP
-- Copilot Studio & Claude Agent SDK
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- CrewAI · AutoGen · pattern phối hợp
+- Bài tiếp: Copilot Studio & Claude Agent SDK →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới agentic AI cấp doanh nghiệp."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

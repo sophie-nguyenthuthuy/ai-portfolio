@@ -23,4 +23,9 @@
 13. [Semantic search — dense retrieval + BM25 hybrid](lecture-13-semantic-search-dense-retrieval-bm25-hybrid/README.md) — 5 slides
 14. [🏆 Capstone 4 — Phân tích cảm xúc / chatbot tiếng Việt](lecture-14-phan-tich-cam-xuc-chatbot-tieng-viet/README.md) 🏆 — 8 slides
 
+## Practice
+
+- 🧪 Quiz: [section-09-quiz](../practice/quizzes/section-09-quiz.md)
+- 📝 Assignment: [assignment-09-nlp-phobert.ipynb](../practice/assignments/assignment-09-nlp-phobert.ipynb)
+
 _← [Về trang khoá học](../README.md)_

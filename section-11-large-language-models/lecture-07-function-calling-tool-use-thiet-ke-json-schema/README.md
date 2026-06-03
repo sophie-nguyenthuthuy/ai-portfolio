@@ -2,79 +2,58 @@
 
 _Phần của: **Section 11: Large Language Models**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 07
-- SECTION 11 · LECTURE 07
-- Function calling / tool use — thiết kế JSON schema
-- ~8 phút · 6 slides
+- Function Calling / Tool Use
 
-### Slide 2
+**🎨 Visual:** `[AI image]` LLM gọi API/công cụ.
+**🎤 Speaker note:** "Cho LLM 'tay chân' để làm việc thật, không chỉ nói."
 
-- L07 · FUNCTION CALLING
-- Vì sao cần tool
+### Slide 2 — Vì sao cần tool
+
 - LLM không biết thời gian thực
 - Không tính toán chính xác
-- LLM
-- →
-- + Tool
-- →
-- bù khuyết điểm
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` LLM + tool bù khuyết điểm.
+**🎤 Speaker note:** Tool bù những gì LLM yếu.
 
-- L07 · FUNCTION CALLING
-- Cách hoạt động
-- LLM tự quyết định khi nào cần tool
-- Mô tả tool
-- →
-- LLM chọn
-- →
-- Gọi
-- →
-- Nhận kết quả
+### Slide 3 — Cách hoạt động
 
-### Slide 4
+- Mô tả tool → LLM chọn → gọi → nhận kết quả
 
-- L07 · FUNCTION CALLING
-- Thiết kế JSON schema
-- Mô tả tool rõ ràng: tên, mô tả, tham số
-- Mô tả tốt = LLM gọi đúng
-- tool_schema.json
-- {
-- "name": "get_weather" ,
-- "description": "Lấy thời tiết theo thành phố" ,
-- "parameters": {"city": {"type": "string" }}
-- }
+**🎨 Visual:** `[Mermaid]` Vòng function calling.
+**🎤 Speaker note:** LLM quyết định khi nào cần tool.
 
-### Slide 5
+### Slide 4 — Thiết kế JSON schema
 
-- L07 · FUNCTION CALLING
-- Ví dụ thực tế
+- Mô tả tool rõ ràng
+- Tên, mô tả, tham số
+
+**🎨 Visual:** `[Screen]` JSON schema một tool.
+**🎤 Speaker note:** Mô tả tốt = LLM gọi đúng.
+
+### Slide 5 — Ví dụ thực tế
+
 - Tra cứu DB, gọi API thời tiết
 - Thực thi code
-- tool_call.py
-- # LLM tự sinh lời gọi tool {"tool": "get_weather", "args": {"city": "Hà Nội"}} # → 28°C, có mưa rào
 
-### Slide 6
+**🎨 Visual:** `[Screen]` Tool call demo.
+**🎤 Speaker note:** Nền tảng của agent.
 
-- L07 · FUNCTION CALLING — TÓM TẮT
-- Tóm tắt
-- tool use
-- JSON schema
-- ví dụ thực tế
-- BÀI TIẾP
-- Fine-tune — LoRA / QLoRA
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- tool use · JSON schema · ví dụ
+- Bài tiếp: fine-tuning LoRA/QLoRA →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta dạy LLM kiến thức chuyên ngành."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

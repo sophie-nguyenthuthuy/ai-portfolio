@@ -2,66 +2,51 @@
 
 _Phần của: **Section 16: Career & Interview**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~6 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 03
-- SECTION 16 · LECTURE 03
-- Tối ưu LinkedIn cho vị trí AI
-- ~6 phút · 5 slides
+- LinkedIn cho dân AI
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Profile LinkedIn.
+**🎤 Speaker note:** "Nhà tuyển dụng chủ động tìm ứng viên trên LinkedIn."
 
-- L03 · LINKEDIN
-- Headline & About
+### Slide 2 — Headline & About
+
 - Headline rõ vai trò + từ khoá
 - About kể câu chuyện
-- SCREEN
-- Headline: "AI/ML Engineer · LLM · MLOps" + About kể hành trình & thế mạnh
 
-### Slide 3
+**🎨 Visual:** `[Screen]` Headline tốt.
+**🎤 Speaker note:** Headline xuất hiện trong tìm kiếm.
 
-- L03 · LINKEDIN
-- Featured & dự án
+### Slide 3 — Featured & dự án
+
 - Ghim dự án, bài viết
 - Link GitHub
-- Featured
-- →
-- Dự án + GitHub
-- →
-- Trang đầu
 
-### Slide 4
+**🎨 Visual:** `[Screen]` Featured section.
+**🎤 Speaker note:** Đưa portfolio lên ngay trang đầu.
 
-- L03 · LINKEDIN
-- Networking & nội dung
+### Slide 4 — Networking & nội dung
+
 - Kết nối, chia sẻ học tập
 - Xây thương hiệu cá nhân
-- KẾT NỐI
-- Mạng lưới
-- đồng nghiệp, recruiter
-- NỘI DUNG
-- Chia sẻ
-- hành trình học
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Networking.
+**🎤 Speaker note:** Chia sẻ hành trình học cũng thu hút nhà tuyển dụng.
 
-- L03 · LINKEDIN — TÓM TẮT
-- Tóm tắt
-- headline
-- featured
-- networking
-- BÀI TIẾP
-- Phỏng vấn coding
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- headline · featured · networking
+- Bài tiếp: phỏng vấn coding →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta luyện phỏng vấn coding."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

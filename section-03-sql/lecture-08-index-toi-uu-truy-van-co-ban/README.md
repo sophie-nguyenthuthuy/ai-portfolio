@@ -2,83 +2,59 @@
 
 _Phần của: **Section 3: SQL — Cơ sở dữ liệu & truy vấn**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- LECTURE 08
-- ~8 phút · 6 slides
-- Index & tối ưu truy vấn cơ bản
-- Truy vấn chậm trên hàng triệu dòng — thường là do thiếu index.
-- AI IMAGE
-- Mục lục sách giúp tra cứu tức thì
-- S3 · Lecture 8
+- Index — tăng tốc truy vấn
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Mục lục sách / kính lúp nhanh.
+**🎤 Speaker note:** "Truy vấn chậm trên triệu dòng = thiếu index."
 
-- L8
-- Tối ưu truy vấn
-- Index là gì — như mục lục của một cuốn sách
-- Không index
-- đọc từng dòng · full table scan
-- vs
-- Có index
-- nhảy thẳng tới dòng cần tìm
-- Index là cấu trúc giúp database tìm dòng mà không cần quét cả bảng.
+### Slide 2 — Index là gì
 
-### Slide 3
+- Cấu trúc giúp tìm dòng nhanh
+- Giống mục lục sách
 
-- L8
-- Tối ưu truy vấn
-- Đánh đổi của index
-- LỢI
-- CHI PHÍ
-- Đọc (SELECT)
-- Nhanh hơn rất nhiều
-- —
-- Ghi (INSERT/UPDATE)
-- —
-- Chậm hơn · phải cập nhật index
-- Lưu trữ
-- —
-- Tốn thêm dung lượng ổ đĩa
-- ⚠ Câu hỏi phỏng vấn: index có nhược điểm gì?
+**🎨 Visual:** `[Mermaid]` Quét toàn bảng vs dùng index.
+**🎤 Speaker note:** Không index = đọc từng dòng (full scan).
 
-### Slide 4
+### Slide 3 — Đánh đổi của index
 
-- L8
-- Tối ưu truy vấn
-- Đọc execution plan với EXPLAIN
-- EXPLAIN SELECT * FROM orders WHERE customer_id = 42; -- Seq Scan  → đang quét toàn bảng (chậm) -- Index Scan → đang dùng index (nhanh)
-- Công cụ debug hiệu năng số 1 — phát hiện full scan.
+- SELECT nhanh hơn
+- INSERT/UPDATE chậm hơn + tốn ổ
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Cân bằng đọc vs ghi.
+**🎤 Speaker note:** ⚠️ Câu hỏi phỏng vấn: index có nhược điểm gì?
 
-- L8
-- Tối ưu truy vấn
-- Mẹo tối ưu nhanh
-- Tạo index cho cột hay dùng để lọc hoặc JOIN
-- Tránh SELECT * — chỉ lấy cột cần thiết
-- Tránh đặt hàm lên cột lọc (vd WHERE year(date)=2025) — làm index vô hiệu
-- Vài mẹo đơn giản giải quyết 80% truy vấn chậm.
+### Slide 4 — Đọc execution plan
 
-### Slide 6
+- `EXPLAIN` xem cách DB chạy
+- Phát hiện full scan
 
-- L8
-- Tóm tắt
-- Tóm tắt & chuyển bài
-- Index
-- Đánh đổi đọc/ghi
-- EXPLAIN
-- Bài tiếp · Procedure, view, trigger
-- →
+**🎨 Visual:** `[Screen]` EXPLAIN một query.
+**🎤 Speaker note:** Công cụ debug hiệu năng số 1.
+
+### Slide 5 — Mẹo tối ưu nhanh
+
+- Index cột hay lọc/JOIN
+- Tránh SELECT *, tránh hàm trên cột lọc
+
+**🎨 Visual:** `[Mermaid]` Checklist tối ưu.
+**🎤 Speaker note:** Vài mẹo đơn giản giải quyết 80% query chậm.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- index · đánh đổi · EXPLAIN
+- Bài tiếp: procedure, view, trigger →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta tự động hoá logic trong database."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

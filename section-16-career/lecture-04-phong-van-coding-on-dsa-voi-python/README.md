@@ -2,81 +2,58 @@
 
 _Phần của: **Section 16: Career & Interview**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 04
-- SECTION 16 · LECTURE 04
-- Phỏng vấn coding — ôn DSA với Python
-- ~8 phút · 6 slides
+- Phỏng vấn Coding
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Màn hình code phỏng vấn.
+**🎤 Speaker note:** "Nhiều vị trí AI vẫn test thuật toán cơ bản."
 
-- L04 · PHỎNG VẤN CODING
-- DSA cần biết
+### Slide 2 — DSA cần biết
+
 - Array, string, hash map
 - Two pointers, sorting
-- CẤU TRÚC
-- Array · String · Hash
-- KỸ THUẬT
-- Two pointers · Sort
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Các chủ đề DSA.
+**🎤 Speaker note:** Không cần quá sâu, nhưng phải vững cơ bản.
 
-- L04 · PHỎNG VẤN CODING
-- Quy trình giải bài
+### Slide 3 — Quy trình giải bài
+
 - Hiểu đề → ví dụ → tiếp cận → code → test
-- Nói to suy nghĩ
-- Hiểu đề
-- →
-- Ví dụ
-- →
-- Tiếp cận
-- →
-- Code
-- →
-- Test
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Quy trình.
+**🎤 Speaker note:** Nói to suy nghĩ — quan trọng hơn ra đáp án.
 
-- L04 · PHỎNG VẤN CODING
-- Big-O
+### Slide 4 — Big-O
+
 - Phân tích độ phức tạp
 - Time & space
-- O(1) < O(log n) < O(n) < O(n²)
-- luôn nói về time & space complexity của giải pháp
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Bảng Big-O.
+**🎤 Speaker note:** Luôn nói về độ phức tạp giải pháp.
 
-- L04 · PHỎNG VẤN CODING
-- Luyện tập
+### Slide 5 — Luyện tập
+
 - LeetCode, HackerRank
-- Mỗi ngày vài bài — đều đặn
-- Mỗi ngày
-- →
-- Vài bài
-- →
-- Đều đặn > nhồi nhét
+- Mỗi ngày vài bài
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` Lộ trình luyện.
+**🎤 Speaker note:** Đều đặn hơn nhồi nhét.
 
-- L04 · PHỎNG VẤN CODING — TÓM TẮT
-- Tóm tắt
-- DSA
-- quy trình
-- Big-O
-- luyện tập
-- BÀI TIẾP
-- ML system design
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- DSA · quy trình · Big-O · luyện tập
+- Bài tiếp: ML system design →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới phần quan trọng nhất: ML system design."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

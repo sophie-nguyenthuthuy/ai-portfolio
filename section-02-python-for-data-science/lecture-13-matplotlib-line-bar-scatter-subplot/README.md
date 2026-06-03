@@ -1,107 +1,58 @@
-# Section 2 · Lecture 13 — Matplotlib Line, Bar, Scatter & Subplot
+# Section 2 · Lecture 13 — Matplotlib — line, bar, scatter, subplot
 
 _Phần của: **Section 2: Python cho Data Science**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~9 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- LECTURE
-- 13
-- ~9 phút
-- SECTION 2 — PYTHON CHO DATA SCIENCE
-- Matplotlib Line, Bar, Scatter & Subplot
-- figure / axes
-- plot · bar · scatter · hist
-- subplot
+- Trực quan hoá với Matplotlib
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Bộ biểu đồ đầy màu.
+**🎤 Speaker note:** "Một biểu đồ tốt nói hơn ngàn con số."
 
-- Cấu Trúc Figure / Axes
-- Figure
-- = khung tổng thể (cửa sổ)
-- Axes
-- = vùng vẽ thực sự (có trục x, y)
-- 1 Figure có thể chứa nhiều Axes (subplot)
-- Hiểu cấu trúc giúp tuỳ biến mọi thứ chính xác
-- Figure
-- Axes
-- title · xlabel · ylabel xlim · ylim · legend plot · bar · scatter · hist
-- 💡
-- Cách OOP: fig, ax = plt.subplots() → tuỳ biến qua ax.set_*() — chuyên nghiệp hơn
+### Slide 2 — Cấu trúc figure/axes
 
-### Slide 3
+- Figure = khung
+- Axes = vùng vẽ
 
-- Các Loại Biểu Đồ Cơ Bản
-- plot()
-- —
-- xu hướng
-- theo thời gian (line)
-- bar()
-- —
-- so sánh
-- giữa các nhóm
-- scatter()
-- —
-- tương quan
-- 2 biến số
-- hist()
-- —
-- phân phối
-- của 1 biến
-- Mỗi loại trả lời 1 câu hỏi phân tích khác nhau
-- charts.py
-- import matplotlib.pyplot as  plt fig, ax = plt.subplots() # Line — xu hướng doanh thu ax.plot(thang, doanh_thu, color="#3776AB") # Bar — top 5 sản phẩm ax.bar(san_pham, doanh_so) # Scatter — chi tiêu vs thu nhập ax.scatter(thu_nhap, chi_tieu, alpha=0.5) # Histogram — phân phối tuổi ax.hist(df["tuoi"], bins=20) plt.show()
+**🎨 Visual:** `[Mermaid]` Figure chứa Axes.
+**🎤 Speaker note:** Hiểu cấu trúc giúp tuỳ biến mọi thứ.
 
-### Slide 4
+### Slide 3 — Biểu đồ cơ bản
 
-- Nhãn, Tiêu Đề & Chú Thích
-- ax.set_title()
-- — tiêu đề biểu đồ
-- ax.set_xlabel() / set_ylabel()
-- — nhãn trục
-- ax.legend()
-- — chú thích
-- ax.grid(True)
-- — lưới nền
-- Biểu đồ
-- không có nhãn = vô dụng
-- — luôn thêm
-- labels.py
-- fig, ax = plt.subplots(figsize=(10, 6)) ax.plot(thang, dt_2023, label="2023") ax.plot(thang, dt_2024, label="2024") ax.set_title("Doanh Thu Theo Tháng") ax.set_xlabel("Tháng") ax.set_ylabel("Doanh Thu (triệu đ)") ax.legend() ax.grid(True, alpha=0.3) plt.tight_layout() plt.savefig("chart.png", dpi=150)
+- plot (line), bar, scatter, hist
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Vẽ line + bar.
+**🎤 Speaker note:** Mỗi loại trả lời 1 câu hỏi khác nhau.
 
-- Subplot — Nhiều Biểu Đồ
-- plt.subplots(rows, cols)
-- — tạo lưới biểu đồ
-- Trả về
-- fig
-- và mảng
-- axes
-- Dùng khi cần so sánh nhiều chỉ số cùng lúc
-- Tiết kiệm không gian, nhìn thấy toàn cảnh
-- subplot.py
-- fig, axes = plt.subplots(2, 2 ,
-- figsize=(12, 8)) # Top-left axes[0,0].plot(thang, doanh_thu) axes[0,0].set_title("Doanh thu") # Top-right axes[0,1].bar(vung, don_hang) axes[0,1].set_title("Đơn hàng") # Bottom-left axes[1,0].hist(df["tuoi"], bins=20) plt.tight_layout() plt.show()
+### Slide 4 — Nhãn, tiêu đề, chú thích
 
-### Slide 6
+- title, xlabel, ylabel, legend
 
-- LECTURE 13 — TÓM TẮT
-- Matplotlib
-- Figure = khung · Axes = vùng vẽ
-- plot · bar · scatter · hist — mỗi loại 1 câu hỏi
-- title · xlabel · ylabel · legend — luôn thêm nhãn
-- subplots(rows, cols) — nhiều biểu đồ cùng lúc
-- →
-- Bài tiếp: Seaborn — đẹp hơn, ít code hơn
+**🎨 Visual:** `[Screen]` Thêm nhãn vào biểu đồ.
+**🎤 Speaker note:** Biểu đồ không nhãn = vô dụng.
+
+### Slide 5 — Subplot
+
+- Nhiều biểu đồ trong 1 figure
+- `plt.subplots(2,2)`
+
+**🎨 Visual:** `[Screen]` Lưới 2×2 subplot.
+**🎤 Speaker note:** Dùng khi so sánh nhiều chỉ số cùng lúc.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- figure/axes · các loại chart · subplot
+- Bài tiếp: Seaborn →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta dùng Seaborn — đẹp hơn, ít code hơn."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

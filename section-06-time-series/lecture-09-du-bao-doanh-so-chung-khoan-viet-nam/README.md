@@ -1,105 +1,67 @@
-# Section 6 · Lecture 9 — Dự báo doanh số / chứng khoán Việt Nam 🏆 **Capstone**
+# Section 6 · Lecture 9 — 🏆 Capstone 2 — Dự báo doanh số / chứng khoán Việt Nam
 
 _Phần của: **Section 6: Time Series — Dự báo chuỗi thời gian**_
 
-**Số slide:** 8
+**Số slide:** 7 · ~14 phút (kèm screen recording)
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 🏆
-- SECTION 6 · CAPSTONE 2 🏆
-- Dự báo doanh số / chứng khoán Việt Nam
-- ~14 phút · 7 slides · screen recording
+- 🏆 Capstone 2: Dự báo time-series
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Biểu đồ dự báo doanh số.
+**🎤 Speaker note:** "Dự án portfolio thứ 2 — so sánh nhiều phương pháp."
 
-- BÀI TOÁN
-- Bài toán & dữ liệu
+### Slide 2 — Bài toán & dữ liệu
+
 - Dữ liệu doanh số / cổ phiếu VN
-- Mục tiêu: dự báo N kỳ tới
-- Xác định rõ khung thời gian đánh giá
+- Mục tiêu dự báo N kỳ tới
 
-### Slide 3
+**🎨 Visual:** `[Screen]` Chuỗi dữ liệu thật.
+**🎤 Speaker note:** Đặt rõ mục tiêu & khung thời gian.
 
-- EDA
-- EDA & decomposition
-- eda.py
-- decomp = seasonal_decompose(y, period=12 )
-- decomp.plot()
-- print("ADF p =", adfuller(y)[1])
-- Tách trend / seasonality
-- Kiểm tra tính dừng (ADF)
-- Hiểu dữ liệu trước khi mô hình hoá
+### Slide 3 — EDA & decomposition
 
-### Slide 4
+- Tách trend/seasonality
+- Kiểm tra tính dừng
 
-- MÔ HÌNH HOÁ
-- Đa phương pháp — để so sánh
-- 01
-- ARIMA / SARIMA
-- Mô hình thống kê kinh điển
-- 02
-- Prophet
-- Mạnh về ngày lễ, dễ dùng
-- 03
-- LSTM
-- Deep learning cho chuỗi dài
-- Mục tiêu là so sánh, không phải chọn sẵn một mô hình.
+**🎨 Visual:** `[Screen]` Decompose + ADF.
+**🎤 Speaker note:** Hiểu dữ liệu trước khi mô hình hoá.
 
-### Slide 5
+### Slide 4 — Mô hình hoá đa phương pháp
 
-- ĐÁNH GIÁ
-- Đánh giá đúng cách
-- MAE
-- Mean Abs Error
-- Trung bình sai số tuyệt đối
-- RMSE
-- Root MSE
-- Phạt nặng sai số lớn
-- MAPE
-- Mean Abs % Error
-- Sai số theo phần trăm
-- ⚠ Backtesting bằng TimeSeriesSplit — không bao giờ shuffle.
+- ARIMA/SARIMA · Prophet · LSTM
 
-### Slide 6
+**🎨 Visual:** `[Screen]` 3 mô hình dự báo.
+**🎤 Speaker note:** Mục tiêu: so sánh, không phải chọn sẵn.
 
-- KẾT LUẬN
-- So sánh & trade-off
-- MÔ HÌNH
-- ĐIỂM MẠNH
-- ĐÁNH ĐỔI
-- ARIMA / SARIMA
-- Nền tảng thống kê vững, xử lý mùa vụ
-- Cần chuỗi dừng, dò tham số thủ công
-- Prophet
-- Ngày lễ, dễ dùng, robust với outlier
-- Kém với quan hệ phi tuyến phức tạp
-- LSTM
-- Bắt phi tuyến, mạnh với chuỗi dài
-- Cần nhiều dữ liệu, bắt buộc scale
+### Slide 5 — Đánh giá đúng cách
 
-### Slide 7
+- MAE, RMSE, MAPE
+- Backtesting (không shuffle)
 
-- PROJECT 2 / 7 ✓
-- Section 6 hoàn thành
-- Time Series — 9 lectures · Capstone 2 dự báo doanh số / chứng khoán VN
-- SECTION TIẾP THEO
-- →
-- Section 7 · Nhập môn Deep Learning
+**🎨 Visual:** `[Screen]` Bảng metric 3 model.
+**🎤 Speaker note:** Chọn metric phù hợp bài toán.
 
-### Slide 8
+### Slide 6 — So sánh & kết luận
 
-- 07
-- SECTION 7 · 12 LECTURES · DEEP LEARNING
-- Nhập môn Deep Learning
-- Hiểu cách neural network hoạt động — forward, loss, backpropagation, optimizer; áp dụng regularization và xây mạng từ đầu bằng NumPy rồi tái hiện bằng PyTorch.
+- Model nào thắng? Vì sao?
+- Trade-off độ chính xác vs đơn giản
+
+**🎨 Visual:** `[Mermaid]` Bảng trade-off.
+**🎤 Speaker note:** Prophet thắng về ngày lễ, LSTM về phi tuyến.
+
+### Slide 7 — Tổng kết Section 6
+
+- Time Series + Capstone 2 ✅
+- Bài tiếp: Section 7 — Deep Learning →
+
+**🎨 Visual:** `[AI image]` Badge "Project 2/7 Done".
+**🎤 Speaker note:** "2 dự án rồi! Giờ ta vào sâu deep learning."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

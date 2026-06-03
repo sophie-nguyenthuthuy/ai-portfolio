@@ -2,70 +2,49 @@
 
 _Phần của: **Section 16: Career & Interview**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 06
-- SECTION 16 · LECTURE 06
-- Phỏng vấn hành vi — STAR, câu hỏi ML hay gặp
-- ~7 phút · 5 slides
+- Phỏng vấn hành vi
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Cuộc trò chuyện phỏng vấn.
+**🎤 Speaker note:** "Kỹ thuật giỏi nhưng trượt vì phỏng vấn hành vi — rất phổ biến."
 
-- L06 · PHỎNG VẤN HÀNH VI
-- Phương pháp STAR
+### Slide 2 — Phương pháp STAR
+
 - Situation, Task, Action, Result
-- Situation
-- →
-- Task
-- →
-- Action
-- →
-- Result
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` STAR framework.
+**🎤 Speaker note:** Kể chuyện có cấu trúc, có kết quả.
 
-- L06 · PHỎNG VẤN HÀNH VI
-- Câu hỏi hay gặp
+### Slide 3 — Câu hỏi hay gặp
+
 - "Kể về dự án ML đã ship"
 - "Model dở trong production, xử lý sao?"
-- DỰ ÁN
-- "Dự án đã ship"
-- dùng STAR
-- SỰ CỐ
-- "Model dở, xử lý?"
-- debug + monitor
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Các câu hỏi.
+**🎤 Speaker note:** Chuẩn bị sẵn 3-4 câu chuyện.
 
-- L06 · PHỎNG VẤN HÀNH VI
-- Giải thích cho non-tech
+### Slide 4 — Giải thích cho non-tech
+
 - Diễn giải model cho người không kỹ thuật
-- Nối lại storytelling các Capstone
-- Ngôn ngữ kỹ thuật
-- →
-- diễn giải
-- →
-- Ngôn ngữ kinh doanh
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Kỹ thuật → ngôn ngữ kinh doanh.
+**🎤 Speaker note:** Kỹ năng quý — nối lại storytelling các Capstone.
 
-- L06 · PHỎNG VẤN HÀNH VI — TÓM TẮT
-- Tóm tắt
-- STAR
-- câu chuyện
-- giải thích non-tech
-- BÀI TIẾP
-- Đàm phán offer
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- STAR · câu chuyện · giải thích non-tech
+- Bài tiếp: đàm phán offer →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta nói về tiền — đàm phán offer."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

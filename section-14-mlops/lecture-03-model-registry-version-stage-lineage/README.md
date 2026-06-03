@@ -2,68 +2,49 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~6 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 03
-- SECTION 14 · LECTURE 03
-- Model registry — version, stage, lineage
-- ~6 phút · 5 slides
+- Model Registry
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Kho model có version.
+**🎤 Speaker note:** "Quản lý model như quản lý code."
 
-- L03 · MODEL REGISTRY
-- Versioning model
+### Slide 2 — Versioning model
+
 - Mỗi model một version
 - Biết model nào đang chạy
-- v1
-- →
-- v2
-- →
-- v3
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` v1, v2, v3.
+**🎤 Speaker note:** Truy vết khi có sự cố.
 
-- L03 · MODEL REGISTRY
-- Stages
+### Slide 3 — Stages
+
 - Staging → Production → Archived
-- Promote model qua các giai đoạn
-- Staging
-- →
-- Production
-- →
-- Archived
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Vòng đời model.
+**🎤 Speaker note:** Promote model qua các giai đoạn.
 
-- L03 · MODEL REGISTRY
-- Lineage
+### Slide 4 — Lineage
+
 - Model từ data nào, code nào
-- Tái lập & audit khi cần
-- Data
-- →
-- Code
-- →
-- Model
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Data → code → model.
+**🎤 Speaker note:** Tái lập & audit khi cần.
 
-- L03 · MODEL REGISTRY — TÓM TẮT
-- Tóm tắt
-- version
-- stage
-- lineage
-- BÀI TIẾP
-- Data versioning
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- version · stage · lineage
+- Bài tiếp: data versioning →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta version cả dữ liệu."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

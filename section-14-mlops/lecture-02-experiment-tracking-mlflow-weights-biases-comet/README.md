@@ -2,79 +2,56 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 02
-- SECTION 14 · LECTURE 02
-- Experiment tracking — MLflow, Weights & Biases, Comet
-- ~8 phút · 6 slides
+- Experiment Tracking
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Dashboard so sánh thí nghiệm.
+**🎤 Speaker note:** "Không track = không biết lần nào tốt, vì sao tốt."
 
-- L02 · EXPERIMENT TRACKING
-- Vấn đề khi không track
+### Slide 2 — Vấn đề không track
+
 - Quên tham số, không tái lập được
-- "Model tốt mà không nhớ chạy sao"
-- không track = không tái lập được kết quả
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Hỗn loạn không track.
+**🎤 Speaker note:** Ai cũng từng "model tốt mà không nhớ chạy sao".
 
-- L02 · EXPERIMENT TRACKING
-- Track gì
-- Params, metrics
-- Artifacts, code version
-- PARAMS
-- Tham số
-- METRICS
-- Kết quả
-- ARTIFACTS
-- Model · file
-- CODE
-- Version
+### Slide 3 — Track gì
 
-### Slide 4
+- Params, metrics, artifacts, code version
 
-- L02 · EXPERIMENT TRACKING
-- MLflow
+**🎨 Visual:** `[Mermaid]` Các thứ cần log.
+**🎤 Speaker note:** Log đủ để tái lập.
+
+### Slide 4 — MLflow
+
 - Mã nguồn mở, phổ biến
 - Log + UI so sánh
-- train.py
-- import mlflow with mlflow.start_run ():
-- mlflow. log_param("lr" , 3e-4)
-- mlflow. log_metric("acc" , 0.92)
-- mlflow. log_artifact("model.pkl")
 
-### Slide 5
+**🎨 Visual:** `[Screen]` MLflow UI.
+**🎤 Speaker note:** Bắt đầu với MLflow.
 
-- L02 · EXPERIMENT TRACKING
-- W&B & Comet
+### Slide 5 — W&B & Comet
+
 - Dashboard đẹp, cộng tác
-- MLFLOW
-- Mã nguồn mở
-- self-host
-- W&B · COMET
-- Dashboard đẹp
-- cộng tác team
 
-### Slide 6
+**🎨 Visual:** `[Screen]` W&B dashboard.
+**🎤 Speaker note:** Tốt cho team.
 
-- L02 · EXPERIMENT TRACKING — TÓM TẮT
-- Tóm tắt
-- tracking
-- MLflow
-- W&B
-- BÀI TIẾP
-- Model registry
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- tracking · MLflow · W&B
+- Bài tiếp: model registry →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta quản lý các phiên bản model."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

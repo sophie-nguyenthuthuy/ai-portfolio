@@ -2,72 +2,50 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~6 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 04
-- SECTION 13 · LECTURE 04
-- LlamaIndex cho agent nặng truy xuất
-- ~6 phút · 5 slides
+- LlamaIndex
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Agent + kho dữ liệu.
+**🎤 Speaker note:** "Chuyên cho agent cần đọc nhiều dữ liệu/tài liệu."
 
-- L04 · LLAMAINDEX
-- LlamaIndex là gì
+### Slide 2 — LlamaIndex là gì
+
 - Framework data cho LLM/RAG
 - Kết nối nhiều nguồn dữ liệu
-- Nguồn dữ liệu
-- →
-- Index
-- →
-- Query
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Nguồn dữ liệu → index → query.
+**🎤 Speaker note:** Nối lại RAG Section 12.
 
-- L04 · LLAMAINDEX
-- Data connector
+### Slide 3 — Data connector
+
 - Nạp PDF, DB, API, web
-- Tổng hợp dữ liệu đa nguồn
-- TÀI LIỆU
-- PDF · Word
-- file nội bộ
-- HỆ THỐNG
-- DB · API
-- dữ liệu sống
-- WEB
-- Trang web
-- crawl & nạp
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Các connector.
+**🎤 Speaker note:** Tổng hợp dữ liệu đa nguồn.
 
-- L04 · LLAMAINDEX
-- Query engine & agent
+### Slide 4 — Query engine & agent
+
 - Truy vấn dữ liệu thông minh
-- LangChain vs LlamaIndex — bổ trợ nhau
-- query.py
-- from llama_index import  VectorStoreIndex
-- index = VectorStoreIndex. from_documents (docs)
-- engine = index. as_query_engine ()
-- engine. query("Doanh thu Q3 là bao nhiêu?") # → trả lời kèm trích dẫn nguồn
+- Kết hợp thành agent
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Query engine.
+**🎤 Speaker note:** LangChain vs LlamaIndex — bổ trợ nhau.
 
-- L04 · LLAMAINDEX — TÓM TẮT
-- Tóm tắt
-- LlamaIndex
-- connector
-- query engine
-- BÀI TIẾP
-- Multi-agent systems
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- LlamaIndex · connector · query engine
+- Bài tiếp: multi-agent →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta cho nhiều agent làm việc cùng nhau."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

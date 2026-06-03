@@ -2,60 +2,57 @@
 
 _Phần của: **Section 7: Deep Learning**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 01
-- SECTION 7 · LECTURE 1
-- Từ Perceptron đến Neural Network
-- ~8 phút · 6 slides
+- Neural Network — bộ não nhân tạo
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Mạng nơ-ron phát sáng.
+**🎤 Speaker note:** "Nền tảng của mọi AI hiện đại — LLM cũng từ đây."
 
-- PERCEPTRON
-- Nơ-ron đơn — đơn vị nhỏ nhất
-- Nhân trọng số → cộng → đưa qua hàm kích hoạt → cho ra một giá trị.
+### Slide 2 — Perceptron
 
-### Slide 3
+- Nơ-ron đơn: nhân trọng số + cộng + kích hoạt
 
-- GIỚI HẠN
-- Bài toán XOR — không tách tuyến tính
-- Perceptron đơn không giải được XOR
-- Hai lớp không thể tách bằng một đường thẳng
-- Lý do lịch sử cần mạng nhiều lớp
+**🎨 Visual:** `[Mermaid]` Sơ đồ 1 perceptron.
+**🎤 Speaker note:** Đơn vị nhỏ nhất của neural network.
 
-### Slide 4
+### Slide 3 — Giới hạn của perceptron
 
-- MLP
-- Multi-Layer Perceptron
-- Input → các lớp ẩn → output: nhiều lớp giúp học quan hệ phi tuyến phức tạp.
+- Không giải được XOR
+- Cần nhiều lớp
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` XOR không tách tuyến tính.
+**🎤 Speaker note:** Lý do lịch sử cần mạng nhiều lớp.
 
-- UNIVERSAL APPROXIMATION
+### Slide 4 — MLP (nhiều lớp)
+
+- Input → hidden → output
+- Học quan hệ phi tuyến
+
+**🎨 Visual:** `[Mermaid]` Mạng 3 lớp.
+**🎤 Speaker note:** Nhiều lớp = học được mẫu phức tạp.
+
+### Slide 5 — Universal approximation
+
 - Mạng đủ lớn xấp xỉ được hàm bất kỳ
-- Mạng đủ lớn xấp xỉ được hàm bất kỳ
-- Đây là sức mạnh lý thuyết của neural network
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` Đường cong phức tạp được khớp.
+**🎤 Speaker note:** Sức mạnh lý thuyết của neural network.
 
-- SECTION 7 · LECTURE 1
-- Tóm tắt & chuyển bài
-- ĐÃ HỌC TRONG BÀI NÀY
-- perceptron
-- MLP
-- universal approximation
-- BÀI TIẾP THEO
-- →
-- Hàm kích hoạt (Activation)
+### Slide 6 — Tóm tắt & chuyển bài
+
+- perceptron · MLP · universal approx
+- Bài tiếp: hàm kích hoạt →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta thêm 'tính phi tuyến' cho mạng."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

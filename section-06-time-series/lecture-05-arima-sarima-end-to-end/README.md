@@ -2,105 +2,67 @@
 
 _Phần của: **Section 6: Time Series — Dự báo chuỗi thời gian**_
 
-**Số slide:** 7
+**Số slide:** 7 · ~10 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 05
-- SECTION 6 · LECTURE 5
-- ARIMA & SARIMA end-to-end
-- ~10 phút · 7 slides
+- ARIMA & SARIMA
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Mô hình dự báo cổ điển.
+**🎤 Speaker note:** "Mô hình thống kê kinh điển nhất cho time-series."
 
-- BA THÀNH PHẦN
-- AR · I · MA
-- AR
-- Auto-Regressive
-- Phụ thuộc các giá trị quá khứ
-- I
-- Integrated
-- Sai phân để đạt tính dừng
-- MA
-- Moving Average
-- Phụ thuộc các nhiễu quá khứ
-- Ghép ba ý đã học ở các bài trước thành một mô hình thống kê hoàn chỉnh.
+### Slide 2 — AR, I, MA
 
-### Slide 3
+- AR: phụ thuộc quá khứ
+- I: sai phân
+- MA: phụ thuộc nhiễu quá khứ
 
-- THAM SỐ
-- ARIMA(p, d, q)
-- p
-- AR order
-- Chọn từ PACF
-- d
-- Differencing
-- Số lần sai phân
-- q
-- MA order
-- Chọn từ ACF
+**🎨 Visual:** `[Mermaid]` 3 thành phần ARIMA.
+**🎤 Speaker note:** Ghép 3 ý đã học ở bài trước.
 
-### Slide 4
+### Slide 3 — ARIMA(p,d,q)
 
-- QUY TRÌNH
-- Quy trình ARIMA chuẩn
-- Kiểm tra tính dừng (ADF)
-- ↓
-- Sai phân đến khi dừng → xác định d
-- ↓
-- Đọc ACF / PACF → chọn p, q
-- ↓
-- Fit mô hình & kiểm định residual
-- ↓
-- Dự báo
-- Làm theo từng bước, không nhảy cóc.
+- Ý nghĩa từng tham số
+- Chọn từ ACF/PACF
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` p,d,q là gì.
+**🎤 Speaker note:** Nối lại bài ACF/PACF.
 
-- SEASONALITY
-- SARIMA — mở rộng cho mùa vụ
-- sarima.py
-- from statsmodels.tsa.statespace.sarimax import  SARIMAX
-- model = SARIMAX(sales, order=(
-- 1, 1, 1 ),
-- seasonal_order=(
-- 1, 1, 1, 12 )).fit()
-- pred = model.forecast(
-- 12)
-- Thêm bộ tham số mùa (P, D, Q, m)
-- Dùng khi có mùa vụ rõ — ví dụ Tết
+### Slide 4 — Quy trình chuẩn
 
-### Slide 6
+- Kiểm tra dừng → sai phân → chọn p,q → fit
 
-- AUTOMATION
-- Auto-ARIMA — tự dò tham số
-- auto_arima.py
-- import pmdarima as  pm
-- model = pm.auto_arima(sales, seasonal=
-- True, m=12 ,
-- stepwise=
-- True, trace=True) print(model.order, model.seasonal_order)
-- pmdarima tự tìm tham số tốt nhất
-- Tiết kiệm thời gian so với dò tay
+**🎨 Visual:** `[Mermaid]` Flowchart quy trình.
+**🎤 Speaker note:** Làm theo từng bước, không nhảy cóc.
 
-### Slide 7
+### Slide 5 — SARIMA (mùa vụ)
 
-- SECTION 6 · LECTURE 5
-- Tóm tắt & chuyển bài
-- ĐÃ HỌC TRONG BÀI NÀY
-- ARIMA
-- SARIMA
-- auto-ARIMA
-- BÀI TIẾP THEO
-- →
-- Facebook Prophet
+- Mở rộng cho seasonality
+- Thêm thành phần mùa
+
+**🎨 Visual:** `[Screen]` SARIMA cho doanh số có Tết.
+**🎤 Speaker note:** Dùng khi có mùa vụ rõ.
+
+### Slide 6 — Auto-ARIMA
+
+- pmdarima tự tìm tham số
+- Cách làm thực tế
+
+**🎨 Visual:** `[Screen]` auto_arima.
+**🎤 Speaker note:** Tiết kiệm thời gian dò tay.
+
+### Slide 7 — Tóm tắt & chuyển bài
+
+- ARIMA · SARIMA · auto-ARIMA
+- Bài tiếp: Prophet & ML →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta thử cách hiện đại, dễ dùng hơn."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

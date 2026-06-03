@@ -2,82 +2,58 @@
 
 _Phần của: **Section 15: Responsible AI**_
 
-**Số slide:** 7
+**Số slide:** 6 · ~9 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 06
-- SECTION 15 · LECTURE 06
-- Xây dựng AI Governance Dashboard
-- ~9 phút · 6 slides
+- AI Governance Dashboard
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Dashboard tổng hợp.
+**🎤 Speaker note:** "Gom mọi thứ Section 15 thành 1 hệ thống theo dõi."
 
-- L06 · GOVERNANCE DASHBOARD
-- Mục tiêu dashboard
-- Theo dõi fairness, drift
-- Explainability, compliance
-- FAIRNESS
-- Công bằng
-- DRIFT
-- Trôi dữ liệu
-- XAI
-- Giải thích
-- COMPLIANCE
-- Tuân thủ
+### Slide 2 — Mục tiêu dashboard
 
-### Slide 3
+- Theo dõi fairness, drift, explainability, compliance
 
-- L06 · GOVERNANCE DASHBOARD
-- Theo dõi fairness & drift
+**🎨 Visual:** `[Mermaid]` 4 trụ cột giám sát.
+**🎤 Speaker note:** Một nơi nhìn toàn cảnh trách nhiệm AI.
+
+### Slide 3 — Theo dõi fairness & drift
+
 - Đo bias theo nhóm
 - Cảnh báo khi lệch
-- SCREEN
-- Fairness panel: metric công bằng theo từng nhóm + cảnh báo khi drift (nối lại S14)
 
-### Slide 4
+**🎨 Visual:** `[Screen]` Fairness panel.
+**🎤 Speaker note:** Nối lại drift (S14) + fairness.
 
-- L06 · GOVERNANCE DASHBOARD
-- Explainability & compliance
+### Slide 4 — Explainability & compliance
+
 - SHAP cho mẫu
-- Checklist tuân thủ — sẵn sàng audit
-- SCREEN
-- Explainability panel: SHAP theo mẫu + checklist tuân thủ Model Card / AI Act
+- Checklist tuân thủ
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Explainability panel.
+**🎤 Speaker note:** Sẵn sàng cho audit.
 
-- L06 · GOVERNANCE DASHBOARD
-- Tích hợp vào MLOps
+### Slide 5 — Tích hợp vào MLOps
+
 - Governance là 1 phần của pipeline
 - Nối lại Section 14
-- MLOps pipeline
-- →
-- + Governance
-- →
-- Production có trách nhiệm
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` Governance trong MLOps.
+**🎤 Speaker note:** Trách nhiệm AI không tách rời production.
 
-- ✓
-- Hoàn thành Section 15
-- 6 / 6 lectures · Governance Dashboard ✓ · 188 / 198 lectures
-- BÀI TIẾP
-- Section 16 — Sự nghiệp & Phỏng vấn
-- →
+### Slide 6 — Tổng kết Section 15
 
-### Slide 7
+- Responsible AI ✅
+- Bài tiếp: Section 16 — Career →
 
-- MASTERING AI · BATCH 10
-- 16
-- Sự nghiệp, Portfolio & Phỏng vấn
-- Xây portfolio GitHub và CV ML thuyết phục, tự tin với phỏng vấn coding, ML system design và hành vi; có chiến lược đàm phán offer và trình bày 3 dự án.
+**🎨 Visual:** `[AI image]` Cánh cửa mở.
+**🎤 Speaker note:** "Đã có kỹ năng đầy đủ. Giờ ta lo phần xin việc!"
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

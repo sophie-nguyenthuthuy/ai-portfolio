@@ -2,68 +2,51 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 08
-- SECTION 13 · LECTURE 08
-- Hệ thống memory — ngắn hạn, dài hạn, episodic, semantic
-- ~7 phút · 5 slides
+- Memory cho Agent
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Bộ nhớ của agent.
+**🎤 Speaker note:** "Không có memory, agent quên sạch sau mỗi lượt."
 
-- L08 · MEMORY
-- Short-term memory
+### Slide 2 — Short-term memory
+
 - Ngữ cảnh hội thoại hiện tại
 - Giới hạn context window
-- Lượt 1
-- →
-- Lượt 2
-- →
-- Buffer hội thoại
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Conversation buffer.
+**🎤 Speaker note:** Nhớ trong phiên làm việc.
 
-- L08 · MEMORY
-- Long-term memory
+### Slide 3 — Long-term memory
+
 - Lưu lâu dài bằng vector DB
-- Truy xuất khi cần — như RAG
-- Ghi nhớ
-- →
-- Vector DB
-- →
-- Truy xuất
+- Truy xuất khi cần
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Memory → vector DB.
+**🎤 Speaker note:** Nối lại RAG — memory cũng là retrieval.
 
-- L08 · MEMORY
-- Episodic & semantic
+### Slide 4 — Episodic & semantic
+
 - Episodic: sự kiện đã xảy ra
-- Semantic: kiến thức / sự thật
-- EPISODIC
-- Sự kiện
-- điều đã xảy ra
-- SEMANTIC
-- Kiến thức
-- sự thật, khái niệm
+- Semantic: kiến thức/sự thật
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` 2 loại memory.
+**🎤 Speaker note:** Phân loại theo loại thông tin.
 
-- L08 · MEMORY — TÓM TẮT
-- Tóm tắt
-- short / long-term
-- episodic / semantic
-- BÀI TIẾP
-- MCP — Model Context Protocol
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- short/long-term · episodic/semantic
+- Bài tiếp: MCP →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới chuẩn kết nối mới: MCP."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

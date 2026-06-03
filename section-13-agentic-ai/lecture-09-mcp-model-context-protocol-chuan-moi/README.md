@@ -2,65 +2,51 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 09
-- SECTION 13 · LECTURE 09
-- MCP (Model Context Protocol) — chuẩn mới
-- ~7 phút · 5 slides
+- MCP — Model Context Protocol
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Chuẩn kết nối agent ↔ công cụ.
+**🎤 Speaker note:** "Chuẩn mở đang định hình cách agent kết nối thế giới."
 
-- L09 · MCP
-- Vấn đề MCP giải
+### Slide 2 — Vấn đề MCP giải
+
 - Mỗi tool một cách tích hợp riêng
-- Cần chuẩn chung — như USB
-- Hỗn loạn tích hợp → chuẩn hoá
-- MCP = "USB cho agent" — một chuẩn kết nối chung
+- Cần chuẩn chung
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Hỗn loạn → chuẩn hoá.
+**🎤 Speaker note:** Như USB cho agent.
 
-- L09 · MCP
-- Kiến trúc MCP
-- MCP server: cung cấp tool / data
-- MCP client: agent dùng
-- CUNG
-- MCP Server
-- →
-- ⇄
-- →
-- CẦU
-- MCP Client
+### Slide 3 — Kiến trúc MCP
 
-### Slide 4
+- MCP server (cung cấp tool/data)
+- MCP client (agent dùng)
 
-- L09 · MCP
-- Vì sao quan trọng
+**🎨 Visual:** `[Mermaid]` Server ↔ client.
+**🎤 Speaker note:** Tách biệt rõ cung và cầu.
+
+### Slide 4 — Vì sao quan trọng
+
 - Tái dùng tool across agents
-- Viết tool một lần, dùng mọi nơi
-- 1 MCP Server
-- ↓
-- Agent A · Agent B · Agent C
+- Hệ sinh thái mở rộng nhanh
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Nhiều agent dùng chung server.
+**🎤 Speaker note:** Viết tool 1 lần, dùng mọi nơi.
 
-- L09 · MCP — TÓM TẮT
-- Tóm tắt
-- MCP
-- server / client
-- chuẩn hoá tool
-- BÀI TIẾP
-- Agent observability
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- MCP · server/client · chuẩn hoá
+- Bài tiếp: observability →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta theo dõi agent đang làm gì."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

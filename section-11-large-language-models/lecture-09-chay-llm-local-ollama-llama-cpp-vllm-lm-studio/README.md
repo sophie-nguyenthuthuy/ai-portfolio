@@ -2,72 +2,52 @@
 
 _Phần của: **Section 11: Large Language Models**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 09
-- SECTION 11 · LECTURE 09
-- Chạy LLM local — Ollama, llama.cpp, vLLM, LM Studio
-- ~7 phút · 5 slides
+- Chạy LLM local
 
-### Slide 2
+**🎨 Visual:** `[AI image]` LLM chạy trên laptop.
+**🎤 Speaker note:** "Riêng tư, miễn phí, không cần internet."
 
-- L09 · LLM LOCAL
-- Vì sao chạy local
-- Bảo mật dữ liệu, không tốn phí API
+### Slide 2 — Vì sao chạy local
+
+- Bảo mật dữ liệu
+- Không tốn phí API
 - Tuỳ biến cao
-- LOCAL
-- Riêng tư & miễn phí
-- dữ liệu ở lại máy
-- không phụ thuộc mạng
-- API
-- Tiện nhưng đánh đổi
-- trả phí token
-- dữ liệu rời máy
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Local vs API.
+**🎤 Speaker note:** Doanh nghiệp lo bảo mật rất cần.
 
-- L09 · LLM LOCAL
-- Ollama & LM Studio
+### Slide 3 — Ollama & LM Studio
+
 - Dễ dùng nhất cho người mới
-- Tải & chạy bằng một lệnh
-- terminal
-- $ ollama run llama3 # tải model & chat ngay trong terminal >>> Xin chào!
+- Tải & chạy bằng 1 lệnh
 
-### Slide 4
+**🎨 Visual:** `[Screen]` ollama run llama.
+**🎤 Speaker note:** Bắt đầu với Ollama.
 
-- L09 · LLM LOCAL
-- vLLM & llama.cpp
+### Slide 4 — vLLM & llama.cpp
+
 - vLLM: phục vụ tốc độ cao
 - llama.cpp: chạy trên phần cứng yếu
-- VLLM
-- Production
-- throughput cao
-- nhiều người dùng
-- LLAMA.CPP
-- Máy yếu
-- CPU / GPU nhỏ
-- GGUF quantized
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Khi nào dùng cái nào.
+**🎤 Speaker note:** vLLM cho production, llama.cpp cho máy yếu.
 
-- L09 · LLM LOCAL — TÓM TẮT
-- Tóm tắt
-- Ollama
-- vLLM
-- llama.cpp
-- LM Studio
-- BÀI TIẾP
-- Đánh giá LLM
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- Ollama · vLLM · llama.cpp · LM Studio
+- Bài tiếp: đánh giá LLM →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta đo LLM tốt cỡ nào."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

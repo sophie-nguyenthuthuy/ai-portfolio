@@ -28,8 +28,9 @@ Repo đồng hành của khoá học: slide theo từng lecture, mã nguồn, da
 
 ✅ = có slide deck & nội dung &nbsp;·&nbsp; 🚧 = đang bổ sung &nbsp;·&nbsp; 🏆N = Capstone project N
 
-> Đã import nội dung slide cho **198 lectures / 1179 slides**.
-> 161 lecture (961 slides) từ các deck .pptx; sections 4 (Toán & Thống kê), 9 (NLP), 10 (Generative AI) — 37 lecture (218 slides) — import từ nguồn markdown slide-by-slide (kèm 🎨 Visual & 🎤 Speaker note).
+> Nội dung slide cho cả **198 lectures / 1174 slides** — mỗi slide kèm **🎨 Visual** & **🎤 Speaker note** (import từ nguồn markdown slide-by-slide).
+> 13/16 section có sẵn `slides.pptx`; sections 4 (Toán & Thống kê), 9 (NLP), 10 (Generative AI) chưa có deck.
+> Mỗi section liên kết tới **[practice/](practice/README.md)** (quiz + assignment).
 
 ## Cấu trúc repo
 

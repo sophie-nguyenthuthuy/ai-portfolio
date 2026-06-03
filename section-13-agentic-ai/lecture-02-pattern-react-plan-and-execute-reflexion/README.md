@@ -2,87 +2,58 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 02
-- SECTION 13 · LECTURE 02
-- Pattern ReAct, Plan-and-Execute, Reflexion
-- ~8 phút · 6 slides
+- Các pattern thiết kế agent
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Các sơ đồ pattern.
+**🎤 Speaker note:** "Mỗi pattern hợp một loại bài toán."
 
-- L02 · PATTERN AGENT
-- ReAct
+### Slide 2 — ReAct
+
 - Reasoning + Acting xen kẽ
 - Suy nghĩ → tool → quan sát
-- Suy nghĩ
-- →
-- Hành động
-- →
-- Quan sát
-- →
-- ↻
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Vòng ReAct.
+**🎤 Speaker note:** Pattern phổ biến nhất.
 
-- L02 · PATTERN AGENT
-- Plan-and-Execute
+### Slide 3 — Plan-and-Execute
+
 - Lập kế hoạch trước, thực thi sau
-- Tốt cho task nhiều bước rõ ràng
-- Lập kế hoạch
-- ↓
-- Thực thi bước 1
-- ↓
-- Thực thi bước 2 …
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Plan → execute steps.
+**🎤 Speaker note:** Tốt cho task nhiều bước rõ ràng.
 
-- L02 · PATTERN AGENT
-- Reflexion
+### Slide 4 — Reflexion
+
 - Tự đánh giá & sửa lỗi
 - Học từ thất bại trong phiên
-- Thử
-- →
-- Tự đánh giá
-- →
-- Sửa & thử lại
-- →
-- ↻
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Vòng tự phản tỉnh.
+**🎤 Speaker note:** Tăng chất lượng qua tự sửa.
 
-- L02 · PATTERN AGENT
-- Chọn pattern nào
+### Slide 5 — Chọn pattern nào
+
 - Đơn giản: ReAct
 - Phức tạp: Plan-Execute + Reflexion
-- ĐƠN GIẢN
-- ReAct
-- ít bước
-- phản ứng nhanh
-- PHỨC TẠP
-- Plan-Execute + Reflexion
-- nhiều bước
-- tự sửa lỗi
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` Bảng lựa chọn.
+**🎤 Speaker note:** Bắt đầu đơn giản, nâng cấp khi cần.
 
-- L02 · PATTERN AGENT — TÓM TẮT
-- Tóm tắt
-- ReAct
-- Plan-Execute
-- Reflexion
-- BÀI TIẾP
-- LangChain & LangGraph
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- ReAct · Plan-Execute · Reflexion
+- Bài tiếp: LangChain & LangGraph →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta dùng framework để xây agent."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

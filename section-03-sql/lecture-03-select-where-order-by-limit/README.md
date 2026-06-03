@@ -2,78 +2,59 @@
 
 _Phần của: **Section 3: SQL — Cơ sở dữ liệu & truy vấn**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~9 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- LECTURE 03
-- ~9 phút · 6 slides
-- SELECT, WHERE, ORDER BY, LIMIT
-- Truy vấn dữ liệu — bước đầu tiên, và là 70% công việc SQL hằng ngày.
-- AI IMAGE
-- Câu lệnh SELECT phát sáng
-- S3 · Lecture 3
+- Truy vấn dữ liệu — bước đầu tiên
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Câu lệnh SELECT phát sáng.
+**🎤 Speaker note:** "4 từ khoá này là 70% công việc SQL hằng ngày."
 
-- L3
-- Truy vấn cơ bản
-- SELECT & FROM — lấy cột từ bảng
-- -- Chọn cột cụ thể từ một bảng SELECT name, city FROM customers; -- SELECT * lấy tất cả cột SELECT * FROM customers;
-- Tránh
-- SELECT *
-- trong production — chỉ lấy cột bạn cần.
+### Slide 2 — SELECT & FROM
 
-### Slide 3
+- `SELECT cot FROM bang`
+- `SELECT *` lấy tất cả cột
 
-- L3
-- Truy vấn cơ bản
-- WHERE — lọc dòng theo điều kiện
-- SELECT name, amount FROM orders WHERE city = 'Hà Nội'   AND amount > 500000   AND name LIKE 'Nguyễn%';
-- AND · OR kết hợp nhiều điều kiện
-- IN · BETWEEN cho danh sách & khoảng giá trị
-- LIKE với ký tự % để tìm gần đúng
+**🎨 Visual:** `[Screen]` SELECT cơ bản.
+**🎤 Speaker note:** Tránh `SELECT *` trong production.
 
-### Slide 4
+### Slide 3 — WHERE & điều kiện
 
-- L3
-- Truy vấn cơ bản
-- ORDER BY — sắp xếp kết quả
-- SELECT name, revenue FROM customers ORDER BY revenue DESC;
-- Kết quả · revenue DESC
-- Mai Anh 9.8M
-- Quốc Bảo 7.1M
-- Thu Hà 5.6M
-- Minh Khôi 4.2M
+- Lọc dòng theo điều kiện
+- AND, OR, IN, BETWEEN, LIKE
 
-### Slide 5
+**🎨 Visual:** `[Screen]` WHERE với nhiều điều kiện.
+**🎤 Speaker note:** LIKE + ký tự % để tìm gần đúng.
 
-- L3
-- Truy vấn cơ bản
-- LIMIT — giới hạn số dòng trả về
-- -- Top 5 khách hàng theo doanh thu SELECT name, revenue FROM customers ORDER BY revenue  DESC LIMIT 5;
-- Lấy nhanh Top N kết quả
-- Cực quan trọng khi bảng có hàng triệu dòng
-- Không tải toàn bộ dữ liệu khi chỉ cần vài dòng
+### Slide 4 — ORDER BY
 
-### Slide 6
+- Sắp xếp kết quả
+- ASC (tăng) / DESC (giảm)
 
-- L3
-- Tóm tắt
-- Tóm tắt & chuyển bài
-- SELECT
-- WHERE
-- ORDER BY
-- LIMIT
-- Bài tiếp · Hàm tổng hợp & GROUP BY
-- →
+**🎨 Visual:** `[Screen]` Sắp xếp doanh thu giảm dần.
+**🎤 Speaker note:** Hay kết hợp với LIMIT để lấy top.
+
+### Slide 5 — LIMIT
+
+- Giới hạn số dòng trả về
+- Top N nhanh
+
+**🎨 Visual:** `[Screen]` Top 5 khách hàng.
+**🎤 Speaker note:** Quan trọng khi bảng có triệu dòng.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- SELECT · WHERE · ORDER BY · LIMIT
+- Bài tiếp: hàm tổng hợp →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta tính toán trên nhóm dữ liệu."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

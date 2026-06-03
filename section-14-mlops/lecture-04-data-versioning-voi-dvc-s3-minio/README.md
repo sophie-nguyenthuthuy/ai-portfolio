@@ -1,61 +1,52 @@
-# Section 14 · Lecture 4 — Data versioning với DVC + S3 / MinIO
+# Section 14 · Lecture 4 — Data versioning với DVC + S3/MinIO
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 04
-- SECTION 14 · LECTURE 04
-- Data versioning với DVC + S3 / MinIO
-- ~7 phút · 5 slides
+- Data Versioning
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Dữ liệu có version như code.
+**🎤 Speaker note:** "Code đổi, data cũng đổi — phải version cả hai."
 
-- L04 · DATA VERSIONING
-- Vì sao version data
+### Slide 2 — Vì sao version data
+
 - Tái lập kết quả
 - Data đổi → model đổi
-- Cùng code + khác data = khác kết quả
-- reproducibility cần version cả dữ liệu
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Cùng code, khác data, khác kết quả.
+**🎤 Speaker note:** Reproducibility cần version data.
 
-- L04 · DATA VERSIONING
-- DVC
+### Slide 3 — DVC
+
 - Git cho dữ liệu lớn
-- Git lưu con trỏ, data ở storage
-- terminal
-- $ dvc add data/train.csv $ dvc push # Git lưu .dvc (con trỏ) · data lên storage
+- Track data, không lưu trong Git
 
-### Slide 4
+**🎨 Visual:** `[Screen]` dvc add/push.
+**🎤 Speaker note:** Git lưu con trỏ, data ở storage.
 
-- L04 · DATA VERSIONING
-- S3 / MinIO
+### Slide 4 — S3 / MinIO
+
 - Lưu data thật trên object storage
-- MinIO: S3 tự host (on-premise)
-- DVC
-- →
-- MinIO / S3
+- MinIO: S3 tự host
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` DVC → MinIO/S3.
+**🎤 Speaker note:** MinIO hợp môi trường on-premise.
 
-- L04 · DATA VERSIONING — TÓM TẮT
-- Tóm tắt
-- DVC
-- S3 / MinIO
-- reproducibility
-- BÀI TIẾP
-- Feature store
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- DVC · S3/MinIO · reproducibility
+- Bài tiếp: feature store →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta quản lý feature tập trung."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

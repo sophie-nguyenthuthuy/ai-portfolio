@@ -2,91 +2,57 @@
 
 _Phần của: **Section 5: Machine Learning Fundamentals**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- LECTURE 08 · ~8 PHÚT
-- 08
-- Random Forest & Bagging
-- sức mạnh của số đông
+- Random Forest — rừng cây
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Nhiều cây cùng bỏ phiếu.
+**🎤 Speaker note:** "Sức mạnh của số đông."
 
-- L08 · VẤN ĐỀ CỦA MỘT CÂY
-- Một cây đơn lẻ dễ dao động mạnh
-- Dễ overfit & không ổn định
-- Đổi vài mẫu dữ liệu → cây thay đổi hẳn
-- Cần một cách giảm
-- phương sai
-- Ý tưởng: kết hợp nhiều cây lại
-- TRỰC GIÁC
-- Hỏi một chuyên gia dễ sai lệch; hỏi cả hội đồng thì ổn định hơn.
+### Slide 2 — Vấn đề của 1 cây
 
-### Slide 3
+- Dễ overfit, không ổn định
 
-- L08 · BAGGING
-- Huấn luyện nhiều model trên các mẫu khác nhau
-- Dữ liệu gốc
-- →
-- Mẫu bootstrap 1
-- Mẫu bootstrap 2
-- Mẫu bootstrap 3
-- →
-- Tổng hợp
-- trung bình / bỏ phiếu
-- Bootstrap = lấy mẫu có hoàn lại. Gộp nhiều cây → giảm phương sai, ổn định hơn.
+**🎨 Visual:** `[Mermaid]` 1 cây dao động mạnh.
+**🎤 Speaker note:** Cần cách giảm phương sai.
 
-### Slide 4
+### Slide 3 — Bagging
 
-- L08 · RANDOM FOREST
+- Huấn luyện nhiều model trên mẫu khác nhau
+- Lấy trung bình / bỏ phiếu
+
+**🎨 Visual:** `[Mermaid]` Bootstrap → nhiều cây → tổng hợp.
+**🎤 Speaker note:** Giảm phương sai, ổn định hơn.
+
+### Slide 4 — Random Forest
+
 - Bagging + chọn ngẫu nhiên feature
-- Mỗi lần chia nhánh chỉ xét một tập feature ngẫu nhiên
-- Khiến các cây khác biệt nhau hơn
-- Các cây đa dạng → rừng mạnh & ổn định
-- Một trong những model "đáng tin" nhất
-- VÌ SAO MẠNH
-- Cây càng đa dạng (ít tương quan), việc bỏ phiếu tập thể càng hiệu quả.
+- Các cây đa dạng hơn
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Rừng cây đa dạng.
+**🎤 Speaker note:** Một trong những model "đáng tin" nhất.
 
-- L08 · FEATURE IMPORTANCE
-- Feature nào quan trọng nhất?
-- tenure (thâm niên)
-- 0.31
-- monthly_charges
-- 0.25
-- contract_type
-- 0.18
-- total_charges
-- 0.13
-- tech_support
-- 0.07
-- Hữu ích để diễn giải model & chọn lọc feature.
+### Slide 5 — Feature importance
 
-### Slide 6
+- Cho biết feature nào quan trọng
 
-- L08 · TÓM TẮT
-- Random Forest & Bagging
-- 01
-- Bagging
-- Nhiều model trên mẫu bootstrap
-- 02
-- Random Forest
-- Bagging + feature ngẫu nhiên
-- 03
-- Importance
-- Đo & diễn giải tầm quan trọng feature
-- BÀI TIẾP
-- Gradient Boosting — nhà vô địch dữ liệu bảng
-- →
+**🎨 Visual:** `[Screen]` Biểu đồ feature importance.
+**🎤 Speaker note:** Hữu ích để diễn giải & chọn feature.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- bagging · random forest · importance
+- Bài tiếp: Gradient Boosting →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới nhà vô địch của dữ liệu bảng — boosting."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

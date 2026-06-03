@@ -2,79 +2,58 @@
 
 _Phần của: **Section 12: RAG & Vector Database**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 02
-- SECTION 12 · LECTURE 02
-- Embeddings — vector dày đặc, similarity, chọn model
-- ~8 phút · 6 slides
+- Embeddings cho RAG
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Văn bản → vector.
+**🎤 Speaker note:** "Trái tim của RAG — biến nghĩa thành số."
 
-- L02 · EMBEDDINGS
-- Embedding là gì
+### Slide 2 — Embedding là gì
+
 - Vector mang ngữ nghĩa
 - Nối lại Section 4 & 9
-- “tài liệu”
-- →
-- [ 0.12, −0.55, 0.83, … ]
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Văn bản gần nghĩa → vector gần.
+**🎤 Speaker note:** Đã gặp ý này nhiều lần — giờ áp dụng.
 
-- L02 · EMBEDDINGS
-- Đo độ tương đồng
+### Slide 3 — Đo độ tương đồng
+
 - Cosine similarity
 - Vector gần = nội dung liên quan
-- cos(q, d) → [−1, 1]
-- càng gần 1 = càng liên quan
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Cosine similarity.
+**🎤 Speaker note:** Nối lại Section 4.
 
-- L02 · EMBEDDINGS
-- Chọn embedding model
-- Lưu ý chất lượng với tiếng Việt
-- OPENAI
-- text-embedding-3
-- chất lượng cao
-- trả phí
-- BGE
-- open · mạnh
-- self-host
-- E5
-- đa ngôn ngữ
-- hỗ trợ VN
+### Slide 4 — Chọn embedding model
 
-### Slide 5
+- OpenAI, BGE, E5
+- Hỗ trợ tiếng Việt?
 
-- L02 · EMBEDDINGS
-- Tạo embedding
+**🎨 Visual:** `[Mermaid]` So sánh model.
+**🎤 Speaker note:** Lưu ý chất lượng với tiếng Việt.
+
+### Slide 5 — Tạo embedding
+
 - Văn bản → vector qua model
-- Vài dòng với sentence-transformers
-- embed.py
-- from sentence_transformers import  SentenceTransformer
-- m =  SentenceTransformer("BAAI/bge-m3" )
-- vecs = m. encode(docs)
-- # → (n, 1024)
 
-### Slide 6
+**🎨 Visual:** `[Screen]` Tạo embedding.
+**🎤 Speaker note:** Vài dòng code với sentence-transformers.
 
-- L02 · EMBEDDINGS — TÓM TẮT
-- Tóm tắt
-- embedding
-- cosine
-- chọn model
-- BÀI TIẾP
-- Vector database
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- embedding · cosine · chọn model
+- Bài tiếp: vector database →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta lưu hàng triệu vector để tìm nhanh."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

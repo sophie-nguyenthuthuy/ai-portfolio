@@ -1,70 +1,52 @@
-# Section 11 · Lecture 6 — Vai trò system / user / assistant, prompt template
+# Section 11 · Lecture 6 — Vai trò system/user/assistant, prompt template
 
 _Phần của: **Section 11: Large Language Models**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~6 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 06
-- SECTION 11 · LECTURE 06
-- Vai trò system / user / assistant, prompt template
-- ~6 phút · 5 slides
+- Roles & Prompt Template
 
-### Slide 2
+**🎨 Visual:** `[AI image]` 3 vai trò hội thoại.
+**🎤 Speaker note:** "Cách tổ chức hội thoại với LLM trong code."
 
-- L06 · ROLES & TEMPLATE
-- Ba vai trò hội thoại
-- System prompt định "tính cách" model
-- SYSTEM
-- Định hướng hành vi
-- vai trò, ràng buộc
-- USER
-- Câu hỏi
-- yêu cầu của người dùng
-- ASSISTANT
-- Trả lời
-- phản hồi của model
+### Slide 2 — Ba vai trò
 
-### Slide 3
+- System: định hướng hành vi
+- User: câu hỏi
+- Assistant: trả lời
 
-- L06 · ROLES & TEMPLATE
-- System prompt
+**🎨 Visual:** `[Mermaid]` 3 role.
+**🎤 Speaker note:** System prompt định "tính cách" model.
+
+### Slide 3 — System prompt
+
 - Đặt ngữ cảnh, vai trò, ràng buộc
-- Nơi kiểm soát model mạnh nhất
-- messages.py
-- messages = [
-- { "role": "system" ,
-- "content": "Bạn là trợ lý CSKH, trả lời ngắn gọn, lịch sự." },
-- { "role": "user", "content": "Đơn của tôi đâu rồi?" },
-- ]
 
-### Slide 4
+**🎨 Visual:** `[Screen]` Ví dụ system prompt.
+**🎤 Speaker note:** Đây là nơi kiểm soát model mạnh nhất.
 
-- L06 · ROLES & TEMPLATE
-- Prompt template
+### Slide 4 — Prompt template
+
 - Mẫu prompt có biến
-- Tái sử dụng, nhất quán cho sản phẩm
-- template.py
-- prompt =  """Tóm tắt văn bản sau trong {n} câu:
-- {document}""" prompt.format(n=3, document=text)
+- Tái sử dụng, nhất quán
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Template với placeholder.
+**🎤 Speaker note:** Chuẩn hoá cho ứng dụng sản phẩm.
 
-- L06 · ROLES & TEMPLATE — TÓM TẮT
-- Tóm tắt
-- system / user / assistant
-- prompt template
-- BÀI TIẾP
-- Function calling / tool use
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- system/user/assistant · template
+- Bài tiếp: function calling →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta cho LLM dùng công cụ bên ngoài."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

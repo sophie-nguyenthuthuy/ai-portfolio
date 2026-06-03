@@ -2,67 +2,58 @@
 
 _Phần của: **Section 7: Deep Learning**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 06
-- SECTION 7 · LECTURE 6
-- Optimizer — SGD, Momentum, Adam, AdamW
-- ~8 phút · 6 slides
+- Optimizer — cách mạng học nhanh
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Đường đi xuống dốc khác nhau.
+**🎤 Speaker note:** "Cùng gradient, optimizer khác = tốc độ học khác."
 
-- SGD
-- Stochastic Gradient Descent
+### Slide 2 — SGD
+
 - Gradient descent trên từng batch
-- Đường đi tới đáy gập ghềnh
-- Nối lại gradient descent Section 4
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Đường SGD gập ghềnh.
+**🎤 Speaker note:** Nối lại gradient descent Section 4.
 
-- MOMENTUM
-- Thêm “quán tính”
-- Tích luỹ quán tính từ các bước trước
-- Vượt qua local minima dễ hơn
-- Nhanh & mượt hơn SGD thuần
+### Slide 3 — Momentum
 
-### Slide 4
+- Tích luỹ "quán tính"
+- Vượt local minima dễ hơn
 
-- ADAM
-- Adaptive Moment Estimation
-- Tự điều chỉnh learning rate cho từng tham số
-- Lựa chọn mặc định an toàn nhất
+**🎨 Visual:** `[Mermaid]` Bóng lăn có đà.
+**🎤 Speaker note:** Nhanh hơn, mượt hơn SGD thuần.
 
-### Slide 5
+### Slide 4 — Adam
 
-- ADAMW
+- Tự điều chỉnh learning rate
+- Mặc định phổ biến nhất
+
+**🎨 Visual:** `[Mermaid]` Adam hội tụ nhanh.
+**🎤 Speaker note:** Lựa chọn an toàn cho hầu hết bài toán.
+
+### Slide 5 — AdamW
+
 - Adam + weight decay đúng cách
-- Adam
-- Adaptive learning rate
-- AdamW
-- + weight decay tách biệt — chuẩn cho Transformer / LLM
-- Sẽ gặp lại AdamW khi huấn luyện LLM ở các section sau.
+- Chuẩn cho Transformer/LLM
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` AdamW.
+**🎤 Speaker note:** Gặp lại khi train LLM.
 
-- SECTION 7 · LECTURE 6
-- Tóm tắt & chuyển bài
-- ĐÃ HỌC TRONG BÀI NÀY
-- SGD
-- Momentum
-- Adam
-- AdamW
-- BÀI TIẾP THEO
-- →
-- Regularization
+### Slide 6 — Tóm tắt & chuyển bài
+
+- SGD · Momentum · Adam · AdamW
+- Bài tiếp: regularization →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta chống overfitting cho mạng."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

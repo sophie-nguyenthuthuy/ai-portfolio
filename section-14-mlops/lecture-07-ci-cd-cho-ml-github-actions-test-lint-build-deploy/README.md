@@ -2,74 +2,50 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 07
-- SECTION 14 · LECTURE 07
-- CI/CD cho ML — GitHub Actions (test, lint, build, deploy)
-- ~7 phút · 5 slides
+- CI/CD cho ML
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Pipeline tự động test → deploy.
+**🎤 Speaker note:** "Tự động kiểm tra & triển khai — như software thật."
 
-- L07 · CI/CD
-- CI/CD là gì
-- CI: tự động test khi push
+### Slide 2 — CI/CD là gì
+
+- CI: tự động test khi push code
 - CD: tự động deploy
-- Push
-- →
-- Test
-- →
-- Build
-- →
-- Deploy
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Push → test → deploy.
+**🎤 Speaker note:** Đảm bảo chất lượng, deploy nhanh.
 
-- L07 · CI/CD
-- Khác biệt cho ML
+### Slide 3 — Khác biệt cho ML
+
 - Test cả data & model
 - Reproducibility
-- SOFTWARE
-- Test code
-- unit test
-- ML
-- + data & model
-- test data
-- test model
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` CI/CD ML vs software.
+**🎤 Speaker note:** ML có thêm data & model để test.
 
-- L07 · CI/CD
-- GitHub Actions
+### Slide 4 — GitHub Actions
+
 - Tự động test, build Docker, push
-- Nối lại Git / GitHub Section 1
-- ci.yml
-- on : [push]
-- jobs:
-- test:
-- steps:
-- -  run : pytest tests/
-- -  run: docker build -t app .
 
-### Slide 5
+**🎨 Visual:** `[Screen]` GitHub Actions workflow.
+**🎤 Speaker note:** Nối lại Git/GitHub Section 1.
 
-- L07 · CI/CD — TÓM TẮT
-- Tóm tắt
-- CI/CD
-- test data / model
-- GitHub Actions
-- BÀI TIẾP
-- Model serving
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- CI/CD · test data/model · GitHub Actions
+- Bài tiếp: model serving →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta phục vụ model qua API."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

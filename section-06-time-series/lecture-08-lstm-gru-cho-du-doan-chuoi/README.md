@@ -2,87 +2,59 @@
 
 _Phần của: **Section 6: Time Series — Dự báo chuỗi thời gian**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~9 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 08
-- SECTION 6 · LECTURE 8
-- LSTM & GRU cho dự đoán chuỗi
-- ~9 phút · 6 slides
+- LSTM & GRU
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Mạng có "bộ nhớ".
+**🎤 Speaker note:** "Deep learning cho dữ liệu có thứ tự."
 
-- MOTIVATION
-- Vì sao cần “bộ nhớ”?
+### Slide 2 — Vì sao cần "bộ nhớ"
+
 - Regression thường quên quá khứ
-- Chuỗi cần
-- nhớ ngữ cảnh
-- dài
-- Thông tin phải truyền qua các bước thời gian
-- t₁
-- →
-- t₂
-- →
-- t₃
-- →
-- t₄
+- Chuỗi cần nhớ ngữ cảnh
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Thông tin truyền qua thời gian.
+**🎤 Speaker note:** Dẫn nhập RNN.
 
-- RNN
-- RNN & vấn đề vanishing gradient
-- RNN chỉ có trí nhớ ngắn hạn
+### Slide 3 — RNN & vấn đề
+
+- Trí nhớ ngắn hạn
 - Vanishing gradient
-- qua nhiều bước
-- Gradient mờ dần → khó nhớ quan hệ xa
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Gradient mờ dần qua thời gian.
+**🎤 Speaker note:** RNN khó nhớ quan hệ xa.
 
-- LSTM
-- Cơ chế cổng (gates)
-- ⌫
-- Forget gate
-- Quyết định quên thông tin nào
-- +
-- Input gate
-- Quyết định ghi thông tin mới
-- →
-- Output gate
-- Quyết định xuất ra gì
-- Cell state mang thông tin xuyên suốt; các cổng kiểm soát nhớ và quên.
+### Slide 4 — LSTM
 
-### Slide 5
+- Cơ chế "cổng" (gate)
+- Nhớ dài hạn, quên nhiễu
 
-- CHUẨN BỊ
-- GRU & chuẩn bị dữ liệu
-- lstm_prep.py
-- from sklearn.preprocessing import  MinMaxScaler
-- scaled = MinMaxScaler().fit_transform(series)
-- # [samples, timesteps, features] X = X.reshape((X.shape[0], window, 1))
-- GRU gọn hơn LSTM, ít tham số
-- ⚠ LSTM bắt buộc scale về [0, 1]
-- ARIMA thì không cần scale
+**🎨 Visual:** `[Mermaid]` LSTM cell với các cổng.
+**🎤 Speaker note:** Giải thích nôm na: cổng quyết định nhớ/quên.
 
-### Slide 6
+### Slide 5 — GRU & chuẩn bị dữ liệu
 
-- SECTION 6 · LECTURE 8
-- Tóm tắt & chuyển bài
-- ĐÃ HỌC TRONG BÀI NÀY
-- RNN
-- LSTM
-- GRU
-- scaling
-- BÀI TIẾP THEO
-- →
-- 🏆 Capstone 2 — Dự báo time-series
+- GRU: gọn hơn LSTM
+- Phải scale về [0,1]
+
+**🎨 Visual:** `[Screen]` Scale + reshape cho LSTM.
+**🎤 Speaker note:** ⚠️ LSTM bắt buộc scale, ARIMA thì không.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- RNN · LSTM · GRU · scale
+- Bài tiếp: Capstone 2 →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ráp tất cả vào dự án dự báo thật."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

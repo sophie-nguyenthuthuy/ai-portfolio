@@ -2,71 +2,51 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 11
-- SECTION 14 · LECTURE 11
-- Cloud — AWS SageMaker, GCP Vertex AI, Azure ML
-- ~7 phút · 5 slides
+- Cloud ML Platforms
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Logo 3 cloud lớn.
+**🎤 Speaker note:** "Doanh nghiệp lớn dùng cloud — biết là lợi thế."
 
-- L11 · CLOUD
-- Vì sao managed platform
+### Slide 2 — Vì sao managed platform
+
 - Không lo hạ tầng
 - Train, deploy, monitor tích hợp
-- SELF-HOST
-- Tự quản
-- kiểm soát
-- tốn công
-- MANAGED
-- Cloud lo
-- tiện
-- chi phí + khoá
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Self-host vs managed.
+**🎤 Speaker note:** Đánh đổi: tiện vs chi phí/khoá nhà cung cấp.
 
-- L11 · CLOUD
-- SageMaker · Vertex · Azure ML
+### Slide 3 — SageMaker, Vertex, Azure ML
+
 - Mỗi cloud một platform ML
-- Hiểu 1, suy ra cái khác
-- AWS
-- SageMaker
-- GCP
-- Vertex AI
-- AZURE
-- Azure ML
+- Tính năng tương tự
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` So sánh.
+**🎤 Speaker note:** Hiểu 1 cái, suy ra cái khác.
 
-- L11 · CLOUD
-- Bedrock & managed LLM
+### Slide 4 — Bedrock & managed LLM
+
 - Gọi LLM qua cloud
 - Không lo hạ tầng GPU
-- App
-- →
-- Managed LLM API
-- →
-- Trả lời
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Managed LLM.
+**🎤 Speaker note:** Nối lại closed LLM Section 11.
 
-- L11 · CLOUD — TÓM TẮT
-- Tóm tắt
-- SageMaker / Vertex / Azure
-- managed LLM
-- BÀI TIẾP
-- Kiến trúc Lakehouse
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- SageMaker/Vertex/Azure ML · managed
+- Bài tiếp: Lakehouse →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta xem kiến trúc dữ liệu hiện đại."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

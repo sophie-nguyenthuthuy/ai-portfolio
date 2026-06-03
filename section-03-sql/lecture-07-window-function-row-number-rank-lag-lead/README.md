@@ -2,108 +2,67 @@
 
 _Phần của: **Section 3: SQL — Cơ sở dữ liệu & truy vấn**_
 
-**Số slide:** 7
+**Số slide:** 7 · ~11 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- LECTURE 07
-- ~11 phút · 7 slides
-- Window function — ROW_NUMBER, RANK, LAG, LEAD
-- Biết phần này, bạn vượt 80% người học SQL.
-- AI IMAGE
-- Cửa sổ trượt trên một bảng dữ liệu
-- S3 · Lecture 7
+- Window function — vũ khí của analyst giỏi
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Cửa sổ trượt trên bảng.
+**🎤 Speaker note:** "Biết cái này, bạn vượt 80% người học SQL."
 
-- L7
-- Window function
-- Window function là gì
-- GROUP BY — GỘP MẤT DÒNG
-- 3 dòng → 1
-- Bắc · 9.8M
-- WINDOW — GIỮ NGUYÊN DÒNG
-- 3 dòng → 3 (thêm cột)
-- Bắc · 3.1M · tổng 9.8M
-- Bắc · 2.5M · tổng 9.8M
-- Bắc · 4.2M · tổng 9.8M
+### Slide 2 — Window function là gì
 
-### Slide 3
+- Tính trên 1 "cửa sổ" dòng
+- Không gom nhóm mất dòng (khác GROUP BY)
 
-- L7
-- Window function
-- OVER & PARTITION BY — chia cửa sổ theo nhóm
-- SELECT  name, region, amount,
-- sum(amount) OVER (PARTITION BY region) AS tong_vung FROM orders;
-- PARTITION BY giống GROUP BY — nhưng
-- giữ nguyên
-- mọi dòng gốc.
+**🎨 Visual:** `[Mermaid]` So sánh GROUP BY (gộp) vs window (giữ dòng).
+**🎤 Speaker note:** Điểm khác biệt cốt lõi với GROUP BY.
 
-### Slide 4
+### Slide 3 — OVER & PARTITION BY
 
-- L7
-- Window function
-- ROW_NUMBER · RANK · DENSE_RANK
-- ĐIỂM
-- ROW_NUMBER
-- RANK
-- DENSE_RANK
-- 95
-- 1
-- 1
-- 1
-- 95
-- 2
-- 1
-- 1
-- 88
-- 3
-- 3
-- 2
-- Khác nhau khi có giá trị trùng — dùng để lấy
-- Top N mỗi nhóm
-- .
+- `OVER (PARTITION BY ...)`
+- Chia cửa sổ theo nhóm
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Cú pháp OVER.
+**🎤 Speaker note:** PARTITION giống GROUP BY nhưng giữ nguyên dòng.
 
-- L7
-- Window function
-- LAG & LEAD — so với kỳ trước / kỳ sau
-- -- % tăng trưởng so tháng trước SELECT  month, revenue,
-- lag(revenue) OVER  (
-- ORDER BY  month
-- )
-- AS thang_truoc FROM monthly_sales;
-- LAG lấy giá trị dòng trước, LEAD dòng sau
-- Cốt lõi cho phân tích chuỗi thời gian bằng SQL
+### Slide 4 — ROW_NUMBER, RANK, DENSE_RANK
 
-### Slide 6
+- Đánh số / xếp hạng trong nhóm
+- Khác nhau khi có giá trị trùng
 
-- L7
-- Window function
-- Running total — tổng luỹ kế
-- SELECT  date, amount,
-- sum(amount) OVER (ORDER BY date) AS luy_ke FROM orders;
-- Cộng dồn theo thứ tự — dùng cho biểu đồ tích luỹ.
+**🎨 Visual:** `[Screen]` So sánh 3 hàm.
+**🎤 Speaker note:** Lấy top N mỗi nhóm — bài toán cực phổ biến.
 
-### Slide 7
+### Slide 5 — LAG & LEAD
 
-- L7
-- Tóm tắt
-- Tóm tắt & chuyển bài
-- OVER · PARTITION BY
-- ROW_NUMBER · RANK
-- LAG · LEAD
-- Running total
-- Bài tiếp · Index & tối ưu truy vấn
-- →
+- Lấy giá trị dòng trước/sau
+- Tính tăng trưởng kỳ này vs kỳ trước
+
+**🎨 Visual:** `[Screen]` LAG tính % tăng trưởng.
+**🎤 Speaker note:** Cốt lõi cho phân tích chuỗi thời gian bằng SQL.
+
+### Slide 6 — Running total
+
+- Tổng luỹ kế (cộng dồn)
+- `SUM() OVER (ORDER BY ...)`
+
+**🎨 Visual:** `[Screen]` Doanh thu luỹ kế.
+**🎤 Speaker note:** Dùng cho biểu đồ tích luỹ.
+
+### Slide 7 — Tóm tắt & chuyển bài
+
+- OVER · ROW_NUMBER · LAG/LEAD · running total
+- Bài tiếp: index & tối ưu →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta làm truy vấn chạy nhanh hơn."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

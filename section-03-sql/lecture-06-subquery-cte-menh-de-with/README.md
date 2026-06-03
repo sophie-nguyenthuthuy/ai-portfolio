@@ -2,82 +2,59 @@
 
 _Phần của: **Section 3: SQL — Cơ sở dữ liệu & truy vấn**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~9 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- LECTURE 06
-- ~9 phút · 6 slides
-- Subquery & CTE (mệnh đề WITH)
-- Khi một câu SELECT không đủ, ta lồng chúng vào nhau.
-- AI IMAGE
-- Truy vấn lồng trong truy vấn
-- S3 · Lecture 6
+- Subquery & CTE
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Truy vấn lồng truy vấn.
+**🎤 Speaker note:** "Khi 1 câu SELECT không đủ, ta lồng chúng."
 
-- L6
-- Truy vấn lồng nhau
-- Subquery — truy vấn bên trong truy vấn
-- -- Khách hàng chi tiêu trên mức trung bình SELECT name, total FROM customers WHERE total >  (
-- SELECT avg(total) FROM  customers
-- );
-- Subquery có thể đặt trong WHERE, FROM hoặc SELECT.
+### Slide 2 — Subquery
 
-### Slide 3
+- Truy vấn bên trong truy vấn
+- Trong WHERE, FROM, SELECT
 
-- L6
-- Truy vấn lồng nhau
-- Subquery tương quan
-- -- Phụ thuộc từng dòng bảng ngoài SELECT name FROM customers c WHERE total >  (
-- SELECT avg (total)
-- FROM  customers
-- WHERE  city = c.city
-- );
-- Chạy lặp lại cho từng dòng của truy vấn ngoài
-- Rất mạnh nhưng chậm — lưu ý hiệu năng
+**🎨 Visual:** `[Screen]` Subquery trong WHERE.
+**🎤 Speaker note:** Ví dụ: khách chi tiêu trên trung bình.
 
-### Slide 4
+### Slide 3 — Subquery tương quan
 
-- L6
-- Truy vấn lồng nhau
-- CTE (WITH) — đặt tên cho truy vấn con
-- WITH vip AS  (
-- SELECT customer_id, sum(amount) AS  total
-- FROM orders GROUP BY  customer_id
-- )
-- SELECT * FROM vip WHERE total > 10000000;
-- Dễ đọc hơn nhiều so với subquery lồng nhiều tầng.
+- Phụ thuộc dòng của truy vấn ngoài
+- Chạy lặp từng dòng
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Correlated subquery.
+**🎤 Speaker note:** Mạnh nhưng chậm — lưu ý hiệu năng.
 
-- L6
-- Truy vấn lồng nhau
-- CTE đệ quy — cho dữ liệu phân cấp
-- Truy vấn tự gọi lại chính nó
-- Cho dữ liệu dạng cây / phân cấp
-- Sơ đồ tổ chức, danh mục sản phẩm lồng nhau
-- Điện tử
-- └ Điện thoại
-- └ iPhone 15
+### Slide 4 — CTE (WITH)
 
-### Slide 6
+- Đặt tên cho truy vấn con
+- `WITH temp AS (...)`
 
-- L6
-- Tóm tắt
-- Tóm tắt & chuyển bài
-- Subquery
-- CTE (WITH)
-- CTE đệ quy
-- Bài tiếp · Window function
-- →
+**🎨 Visual:** `[Screen]` CTE thay subquery.
+**🎤 Speaker note:** Dễ đọc hơn subquery lồng nhiều tầng.
+
+### Slide 5 — CTE đệ quy
+
+- Truy vấn tự gọi lại
+- Cho dữ liệu phân cấp/cây
+
+**🎨 Visual:** `[Mermaid]` Cây phân cấp.
+**🎤 Speaker note:** Dùng cho sơ đồ tổ chức, danh mục lồng nhau.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- subquery · CTE · đệ quy
+- Bài tiếp: window function →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới phần phân biệt junior với senior — window function."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

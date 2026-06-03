@@ -2,63 +2,51 @@
 
 _Phần của: **Section 11: Large Language Models**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~6 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 04
-- SECTION 11 · LECTURE 04
-- Tokenization cho LLM — BPE, SentencePiece
-- ~6 phút · 5 slides
+- Tokenization cho LLM
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Văn bản cắt thành token.
+**🎤 Speaker note:** "LLM không thấy chữ — chỉ thấy token."
 
-- L04 · TOKENIZATION
-- Token là gì
+### Slide 2 — Token là gì
+
 - Mảnh subword
-- Không phải từ, cũng không phải ký tự
-- “tokenization”
-- →
-- token
-- →
-- ##ization
+- Không phải từ, không phải ký tự
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Câu → token.
+**🎤 Speaker note:** Nối lại tokenization Section 9.
 
-- L04 · TOKENIZATION
-- BPE & SentencePiece
-- Gộp dần các cặp ký tự hay đi cùng
+### Slide 3 — BPE & SentencePiece
+
+- Gộp cặp ký tự hay đi cùng
 - Xử lý từ lạ tốt
-- t,o,k,e,n → to, ken → token
-- BPE gộp cặp phổ biến — cân bằng từ ↔ ký tự
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` BPE gộp dần.
+**🎤 Speaker note:** Cân bằng giữa từ và ký tự.
 
-- L04 · TOKENIZATION
-- Token & chi phí
+### Slide 4 — Token & chi phí
+
 - API tính tiền theo token
-- ⚠️ Tiếng Việt tốn token hơn tiếng Anh
-- count_tokens.py
-- import  tiktoken
-- enc = tiktoken.get_encoding("cl100k_base") len(enc.encode("Xin chào thế giới")) # → 9 tokens · "Hello world" → 2
+- Tiếng Việt tốn token hơn tiếng Anh
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Đếm token.
+**🎤 Speaker note:** ⚠️ Lưu ý chi phí khi xử lý tiếng Việt.
 
-- L04 · TOKENIZATION — TÓM TẮT
-- Tóm tắt
-- token
-- BPE / SentencePiece
-- chi phí token
-- BÀI TIẾP
-- Prompt engineering
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- token · BPE · chi phí token
+- Bài tiếp: prompt engineering →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới kỹ năng quan trọng nhất: viết prompt."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

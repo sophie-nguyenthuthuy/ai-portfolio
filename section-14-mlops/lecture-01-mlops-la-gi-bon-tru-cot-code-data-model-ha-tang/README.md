@@ -2,87 +2,58 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 01
-- SECTION 14 · LECTURE 01
-- MLOps là gì? Bốn trụ cột: code, data, model, hạ tầng
-- ~8 phút · 6 slides
+- MLOps — đưa AI vào đời thật
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Pipeline ML chạy production.
+**🎤 Speaker note:** "Đây là điểm khác biệt của khoá — nơi 80% việc AI thật xảy ra."
 
-- L01 · MLOPS LÀ GÌ
-- Vì sao MLOps
+### Slide 2 — Vì sao MLOps
+
 - Model trong notebook ≠ sản phẩm
 - 80% model không bao giờ lên production
-- Notebook → Production
-- 80% model không bao giờ rời notebook — MLOps thu hẹp khoảng cách
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Khoảng cách notebook → production.
+**🎤 Speaker note:** "Model ship được đáng giá hơn model thắng Kaggle."
 
-- L01 · MLOPS LÀ GÌ
-- Bốn trụ cột
+### Slide 3 — Bốn trụ cột
+
 - Code · Data · Model · Hạ tầng
-- Cả 4 đều cần version & quản lý
-- CODE
-- Mã nguồn
-- DATA
-- Dữ liệu
-- MODEL
-- Mô hình
-- INFRA
-- Hạ tầng
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` 4 trụ cột MLOps.
+**🎤 Speaker note:** Cả 4 đều cần version & quản lý.
 
-- L01 · MLOPS LÀ GÌ
-- Vòng đời ML thật
+### Slide 4 — Vòng đời ML thật
+
 - Không tuyến tính — vòng lặp liên tục
 - Train → deploy → monitor → retrain
-- Train
-- →
-- Deploy
-- →
-- Monitor
-- →
-- Retrain
-- →
-- ↻
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Vòng lặp MLOps.
+**🎤 Speaker note:** Model sống thì phải bảo trì.
 
-- L01 · MLOPS LÀ GÌ
-- Maturity model
+### Slide 5 — Maturity model
+
 - Level 0: thủ công
-- Level 1–2: tự động hoá dần
-- THỦ CÔNG
-- L0
-- →
-- TỰ ĐỘNG TRAIN
-- L1
-- →
-- TỰ ĐỘNG ĐẦY ĐỦ
-- L2
+- Level 1-2: tự động hoá dần
 
-### Slide 6
+**🎨 Visual:** `[Mermaid]` 3 cấp độ MLOps.
+**🎤 Speaker note:** Nâng cấp dần, không cần hoàn hảo ngay.
 
-- L01 · MLOPS LÀ GÌ — TÓM TẮT
-- Tóm tắt
-- 4 trụ cột
-- vòng đời
-- maturity
-- BÀI TIẾP
-- Experiment tracking
-- →
+### Slide 6 — Tóm tắt & chuyển bài
+
+- 4 trụ cột · vòng đời · maturity
+- Bài tiếp: experiment tracking →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta theo dõi các lần thử nghiệm."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

@@ -16,6 +16,10 @@
 6. [Stable Diffusion, ControlNet, ComfyUI thực hành](lecture-06-stable-diffusion-controlnet-comfyui-thuc-hanh/README.md) — 6 slides
 7. [Workflow text-to-image, image-to-image, inpainting](lecture-07-workflow-text-to-image-image-to-image-inpainting/README.md) — 5 slides
 8. [Flow Matching & World Models — xem trước nghiên cứu mới](lecture-08-flow-matching-world-models-xem-truoc-nghien-cuu-moi/README.md) — 5 slides
-9. [Mini-Project — Sinh ảnh sản phẩm theo thương hiệu cho TMĐT](lecture-09-sinh-anh-san-pham-theo-thuong-hieu-cho-tmdt/README.md) — 7 slides
+9. [Mini-Project — Sinh ảnh sản phẩm theo thương hiệu cho TMĐT](lecture-09-sinh-anh-san-pham-theo-thuong-hieu-cho-tmdt/README.md) 🏆 — 7 slides
+
+## Practice
+
+- 🧪 Quiz: [section-10-quiz](../practice/quizzes/section-10-quiz.md)
 
 _← [Về trang khoá học](../README.md)_

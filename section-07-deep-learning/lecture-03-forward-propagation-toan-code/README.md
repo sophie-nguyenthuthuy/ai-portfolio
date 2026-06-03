@@ -2,63 +2,49 @@
 
 _Phần của: **Section 7: Deep Learning**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 03
-- SECTION 7 · LECTURE 3
-- Forward propagation — toán + code
-- ~8 phút · 5 slides
+- Lan truyền xuôi (Forward)
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Dữ liệu chảy trái → phải.
+**🎤 Speaker note:** "Cách mạng tạo ra dự đoán."
 
-- MỘT LỚP
-- Một lớp tính những gì?
-- 1
+### Slide 2 — Một lớp tính gì
+
 - z = W·x + b
-- Tổ hợp tuyến tính của input
-- 2
-- a = f(z)
-- Đưa qua hàm kích hoạt
-- Nối lại phép nhân ma trận đã học ở Section 4.
+- a = activation(z)
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` 1 lớp tính toán.
+**🎤 Speaker note:** Nối lại nhân ma trận Section 4.
 
-- XẾP CHỒNG
+### Slide 3 — Xếp chồng nhiều lớp
+
 - Output lớp này = input lớp sau
-- Cứ thế truyền tiếp cho tới lớp output → ra dự đoán.
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Chuỗi lớp.
+**🎤 Speaker note:** Cứ thế tới lớp output.
 
-- NUMPY
-- Forward pass bằng NumPy
-- forward.py
-- def  forward(x, W1, b1, W2, b2):
-- z1 = x @ W1 + b1
-- a1 = np.maximum(
-- 0, z1)        # ReLU     z2 = a1 @ W2 + b2
-- return softmax(z2)
-- Thấy rõ: neural network về bản chất chỉ là toán ma trận.
+### Slide 4 — Code forward bằng NumPy
 
-### Slide 5
+- Nhân ma trận + activation
 
-- SECTION 7 · LECTURE 3
-- Tóm tắt & chuyển bài
-- ĐÃ HỌC TRONG BÀI NÀY
-- z = Wx + b
-- activation
-- xếp lớp
-- BÀI TIẾP THEO
-- →
-- Hàm mất mát (Loss)
+**🎨 Visual:** `[Screen]` Forward pass NumPy.
+**🎤 Speaker note:** Thấy rõ neural network chỉ là toán ma trận.
+
+### Slide 5 — Tóm tắt & chuyển bài
+
+- z=Wx+b · activation · xếp lớp
+- Bài tiếp: hàm mất mát →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta đo mạng dự đoán sai bao nhiêu."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

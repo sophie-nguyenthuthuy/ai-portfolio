@@ -2,72 +2,57 @@
 
 _Phần của: **Section 12: RAG & Vector Database**_
 
-**Số slide:** 6
+**Số slide:** 6 · ~8 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 06
-- SECTION 12 · LECTURE 06
-- Hybrid search — BM25 + vector + reranker
-- ~8 phút · 6 slides
+- Hybrid Search & Reranker
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Kết hợp 2 cách tìm.
+**🎤 Speaker note:** "Nâng chất lượng retrieve — phần quyết định RAG tốt hay dở."
 
-- L06 · HYBRID SEARCH
-- Vì sao chỉ vector chưa đủ
+### Slide 2 — Vì sao chỉ vector chưa đủ
+
 - Miss từ khoá chính xác (mã, tên)
-- Vector: giỏi nghĩa · kém khớp chính xác
-- mã sản phẩm "SKU-8842" dễ bị bỏ sót
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Vector miss keyword.
+**🎤 Speaker note:** Vector giỏi nghĩa, kém khớp chính xác.
 
-- L06 · HYBRID SEARCH
-- Hybrid: BM25 + vector
+### Slide 3 — Hybrid: BM25 + vector
+
 - BM25 (keyword) + dense (nghĩa)
 - Kết hợp điểm
-- BM25 + Dense vector
-- khớp từ khoá × hiểu ngữ nghĩa
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Hybrid score.
+**🎤 Speaker note:** Nối lại hybrid search Section 9.
 
-- L06 · HYBRID SEARCH
-- Reranker
+### Slide 4 — Reranker
+
 - Xếp lại top kết quả chính xác hơn
 - BGE-reranker
-- Top-50 thô
-- →
-- Reranker
-- →
-- Top-5 tinh
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Retrieve → rerank.
+**🎤 Speaker note:** Cải thiện đáng kể chất lượng cuối.
 
-- L06 · HYBRID SEARCH
-- Pipeline nâng cấp
-- Chuẩn cho RAG production
-- Hybrid retrieve
-- →
-- Rerank
-- →
-- Generate
+### Slide 5 — Pipeline nâng cấp
 
-### Slide 6
+- Hybrid retrieve → rerank → generate
 
-- L06 · HYBRID SEARCH — TÓM TẮT
-- Tóm tắt
-- hybrid
-- BM25 + vector
-- reranker
-- BÀI TIẾP
-- RAG nâng cao
-- →
+**🎨 Visual:** `[Mermaid]` Pipeline có reranker.
+**🎤 Speaker note:** Đây là chuẩn cho RAG production.
+
+### Slide 6 — Tóm tắt & chuyển bài
+
+- hybrid · BM25+vector · reranker
+- Bài tiếp: RAG nâng cao →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ tới các kỹ thuật RAG hiện đại."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

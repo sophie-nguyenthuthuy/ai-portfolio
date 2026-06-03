@@ -2,69 +2,50 @@
 
 _Phần của: **Section 13: Agentic AI**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 07
-- SECTION 13 · LECTURE 07
-- Thiết kế tool — API, thực thi code, browser, database
-- ~7 phút · 5 slides
+- Thiết kế Tool cho Agent
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Bộ công cụ của agent.
+**🎤 Speaker note:** "Agent mạnh hay yếu phụ thuộc tool của nó."
 
-- L07 · THIẾT KẾ TOOL
-- Các loại tool
+### Slide 2 — Các loại tool
+
 - API call, code execution
 - Browser, database query
-- API
-- Gọi dịch vụ
-- CODE
-- Thực thi code
-- BROWSER
-- Duyệt web
-- DATABASE
-- Truy vấn DB
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Các loại tool.
+**🎤 Speaker note:** Nối lại function calling Section 11.
 
-- L07 · THIẾT KẾ TOOL
-- Mô tả tool tốt
+### Slide 3 — Mô tả tool tốt
+
 - Tên rõ, mô tả rõ, tham số rõ
-- Mô tả tốt = agent dùng đúng tool
-- tool.py
-- @tool def search_docs (query: str) -> str:
-- """Tìm tài liệu nội bộ theo từ khoá."""     return db.search(query)
 
-### Slide 4
+**🎨 Visual:** `[Screen]` Tool definition.
+**🎤 Speaker note:** Mô tả tốt = agent dùng đúng tool.
 
-- L07 · THIẾT KẾ TOOL
-- Xử lý lỗi tool
+### Slide 4 — Xử lý lỗi tool
+
 - Tool fail → agent xử lý thế nào
 - Retry, fallback
-- Gọi tool
-- →
-- Lỗi?
-- →
-- Retry / fallback
 
-### Slide 5
+**🎨 Visual:** `[Mermaid]` Error handling.
+**🎤 Speaker note:** Agent production phải bền với lỗi tool.
 
-- L07 · THIẾT KẾ TOOL — TÓM TẮT
-- Tóm tắt
-- loại tool
-- mô tả tool
-- xử lý lỗi
-- BÀI TIẾP
-- Hệ thống memory
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- loại tool · mô tả · xử lý lỗi
+- Bài tiếp: memory →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta cho agent trí nhớ."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

@@ -2,66 +2,50 @@
 
 _Phần của: **Section 14: MLOps & Production**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~6 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 05
-- SECTION 14 · LECTURE 05
-- Feature store — Feast, Hopsworks (online vs offline)
-- ~6 phút · 5 slides
+- Feature Store
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Kho feature dùng chung.
+**🎤 Speaker note:** "Tránh tính lại feature ở mỗi nơi — quản lý tập trung."
 
-- L05 · FEATURE STORE
-- Khi không có feature store
-- Train / serve tính feature khác nhau
-- Training–serving skew
-- Train ≠ Serve → skew
-- lệch định nghĩa feature giữa train và serve gây model dở
+### Slide 2 — Vấn đề không có feature store
 
-### Slide 3
+- Train/serve tính feature khác nhau
+- Training-serving skew
 
-- L05 · FEATURE STORE
-- Online vs Offline
+**🎨 Visual:** `[Mermaid]` Skew giữa train & serve.
+**🎤 Speaker note:** Lỗi tinh vi gây model dở trong production.
+
+### Slide 3 — Online vs Offline
+
 - Offline: train (lịch sử)
 - Online: serve (real-time)
-- OFFLINE
-- Train
-- dữ liệu lịch sử
-- ONLINE
-- Serve
-- real-time
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` 2 store.
+**🎤 Speaker note:** Cùng định nghĩa feature, 2 nơi dùng.
 
-- L05 · FEATURE STORE
-- Feast & Hopsworks
+### Slide 4 — Feast & Hopsworks
+
 - Feast: nhẹ, mã nguồn mở
-- Đảm bảo nhất quán train–serve
-- features.py
-- from feast import  FeatureStore
-- store =  FeatureStore("." )
-- store. get_online_features(...)
-- # serve store.get_historical_features(...)  # train
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Feast định nghĩa feature.
+**🎤 Speaker note:** Đảm bảo nhất quán train-serve.
 
-- L05 · FEATURE STORE — TÓM TẮT
-- Tóm tắt
-- feature store
-- online / offline
-- skew
-- BÀI TIẾP
-- Orchestration
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- feature store · online/offline · skew
+- Bài tiếp: orchestration →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ta tự động hoá toàn pipeline."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_

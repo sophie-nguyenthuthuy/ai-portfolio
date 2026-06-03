@@ -2,65 +2,50 @@
 
 _Phần của: **Section 12: RAG & Vector Database**_
 
-**Số slide:** 5
+**Số slide:** 5 · ~7 phút
 
 ---
 
 ## Nội dung slide
 
-### Slide 1
+### Slide 1 — Tiêu đề
 
-- 10
-- SECTION 12 · LECTURE 10
-- RAG production — latency, caching, trích dẫn nguồn
-- ~7 phút · 5 slides
+- RAG trong Production
 
-### Slide 2
+**🎨 Visual:** `[AI image]` Hệ RAG đang phục vụ người dùng.
+**🎤 Speaker note:** "Từ demo tới sản phẩm thật — nhiều thứ phải lo."
 
-- L10 · RAG PRODUCTION
-- Latency
+### Slide 2 — Latency
+
 - Retrieve + generate tốn thời gian
 - Tối ưu từng khâu
-- Retrieve
-- →
-- Rerank
-- →
-- Generate
 
-### Slide 3
+**🎨 Visual:** `[Mermaid]` Phân rã latency.
+**🎤 Speaker note:** Nối lại metric P95 (sẽ học MLOps).
 
-- L10 · RAG PRODUCTION
-- Caching
+### Slide 3 — Caching
+
 - Cache embedding & câu trả lời
-- Nối lại tối ưu chi phí Section 11
-- Query
-- →
-- Cache
-- →
-- Answer
 
-### Slide 4
+**🎨 Visual:** `[Mermaid]` Cache layers.
+**🎤 Speaker note:** Nối lại tối ưu chi phí Section 11.
 
-- L10 · RAG PRODUCTION
-- Trích dẫn nguồn
+### Slide 4 — Trích dẫn nguồn
+
 - Hiển thị nguồn câu trả lời
 - Tăng niềm tin, chống bịa
-- answer.txt
-- Theo quy định, nghỉ phép tối đa 12 ngày/năm. Nguồn: [So_tay_NV.pdf · trang 8]
 
-### Slide 5
+**🎨 Visual:** `[Screen]` Câu trả lời + nguồn.
+**🎤 Speaker note:** Người dùng tin hơn khi thấy nguồn.
 
-- L10 · RAG PRODUCTION — TÓM TẮT
-- Tóm tắt
-- latency
-- caching
-- citation
-- BÀI TIẾP
-- Capstone 5 — RAG Chatbot
-- →
+### Slide 5 — Tóm tắt & chuyển bài
+
+- latency · caching · citation
+- Bài tiếp: Capstone 5 →
+
+**🎨 Visual:** `[AI image]` Mũi tên tiến.
+**🎤 Speaker note:** "Giờ ráp tất cả: chatbot tài liệu thật."
 
 ---
-
-_Slide deck đầy đủ: [../slides.pptx](../slides.pptx)_
 
 _← [Về Section README](../README.md)_
