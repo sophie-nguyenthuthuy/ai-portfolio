@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+mlruns/
+models/*.joblib
+models/*.json
+data/*.csv
+.git/
+.github/
+*.md
+!README.md
+.env
+tests/

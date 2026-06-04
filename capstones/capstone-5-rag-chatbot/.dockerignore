@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.git/
+.github/
+qdrant_storage/
+models/*
+!models/.gitkeep
+.env
+.DS_Store
+tests/

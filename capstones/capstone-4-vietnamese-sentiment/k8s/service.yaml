@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nlpvi-api
+  labels:
+    app: nlpvi
+spec:
+  type: ClusterIP
+  selector:
+    app: nlpvi
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000
+      protocol: TCP

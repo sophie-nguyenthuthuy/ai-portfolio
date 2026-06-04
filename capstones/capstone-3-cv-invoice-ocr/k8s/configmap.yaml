@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cv-invoice-ocr-config
+  labels:
+    app: cv-invoice-ocr
+data:
+  VISION_APP_NAME: "cv-invoice-ocr"
+  VISION_BACKEND: "dummy"
+  VISION_OCR_ENGINE: "stub"
+  VISION_LOG_LEVEL: "INFO"
+  VISION_USE_MLFLOW: "false"
+  VISION_MODEL_DIR: "models"

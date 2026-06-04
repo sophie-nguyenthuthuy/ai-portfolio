@@ -1,0 +1,28 @@
+# data & artifacts
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+mlruns/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# env / editors
+.env
+.DS_Store
+.idea/
+.vscode/

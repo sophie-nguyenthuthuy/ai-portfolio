@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nlpvi-config
+  labels:
+    app: nlpvi
+data:
+  NLPVI_LOG_LEVEL: "INFO"
+  NLPVI_MODEL_BACKEND: "sklearn"
+  NLPVI_MLFLOW_ENABLED: "false"
+  NLPVI_SYNTHETIC_SIZE: "600"
+  NLPVI_API_PORT: "8000"

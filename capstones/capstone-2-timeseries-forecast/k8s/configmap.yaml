@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: forecast-config
+  labels:
+    app: timeseries-forecast
+data:
+  FORECAST_MODEL_NAME: "baseline"
+  FORECAST_SEASON_LENGTH: "7"
+  FORECAST_HORIZON: "14"
+  FORECAST_MODEL_DIR: "/app/models"
+  FORECAST_MLFLOW_TRACKING_URI: "file:/app/mlruns"
+  FORECAST_USE_MLFLOW: "false"
+  FORECAST_LOG_LEVEL: "INFO"

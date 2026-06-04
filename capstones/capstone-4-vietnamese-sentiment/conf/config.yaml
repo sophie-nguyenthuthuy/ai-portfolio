@@ -1,0 +1,35 @@
+# Default configuration consumed by nlpvi.config.Settings.
+# Environment variables (prefix NLPVI_) override any value here.
+
+app_name: nlpvi
+log_level: INFO
+random_seed: 13
+
+# model: "sklearn" (default, offline) or "phobert" (optional transformer path)
+model_backend: sklearn
+phobert_model_name: vinai/phobert-base
+max_seq_len: 128
+
+# data
+data_path: data/reviews.csv
+synthetic_size: 600
+test_size: 0.2
+
+# tf-idf + logistic regression
+tfidf_max_features: 5000
+tfidf_ngram_max: 2
+lr_c: 4.0
+lr_max_iter: 1000
+
+# artifacts
+model_dir: models
+model_filename: sentiment.joblib
+
+# mlflow
+mlflow_enabled: true
+mlflow_tracking_uri: file:./mlruns
+mlflow_experiment: nlpvi-sentiment
+
+# serving
+api_host: 0.0.0.0
+api_port: 8000

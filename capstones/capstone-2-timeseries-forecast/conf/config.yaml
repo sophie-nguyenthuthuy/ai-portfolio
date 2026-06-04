@@ -1,0 +1,27 @@
+# Default configuration consumed by forecast.config.Settings.
+# Env vars (prefix FORECAST_) override any value here.
+
+# data
+data_path: data/series.csv
+date_col: date
+value_col: value
+synthetic_days: 730
+seed: 42
+
+# forecasting
+season_length: 7
+horizon: 14
+test_size: 28
+backtest_folds: 3
+model_name: baseline      # baseline | naive_seasonal | sarima | prophet | lstm
+conf_level: 0.9
+
+# artifacts / tracking
+model_dir: models
+mlflow_tracking_uri: file:./mlruns
+mlflow_experiment: timeseries-forecast
+use_mlflow: true
+
+# service
+app_name: timeseries-forecast
+log_level: INFO

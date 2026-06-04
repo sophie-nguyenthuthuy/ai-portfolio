@@ -1,0 +1,87 @@
+name: capstone-mlops
+
+services:
+  api:
+    build: .
+    image: capstone-mlops:latest
+    ports:
+      - "8000:8000"
+    environment:
+      MLOPS_REGISTRY_BACKEND: local
+      MLOPS_REGISTRY_DIR: /app/registry
+      MLOPS_MLFLOW_TRACKING_URI: http://mlflow:5000
+    volumes:
+      - ./registry:/app/registry
+      - ./models:/app/models
+      - ./data:/app/data
+    depends_on:
+      - mlflow
+    networks:
+      - mlops-net
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.13.0
+    command: >
+      bash -c "pip install psycopg2-binary &&
+      mlflow server --host 0.0.0.0 --port 5000
+      --backend-store-uri postgresql+psycopg2://mlflow:mlflow@postgres:5432/mlflow
+      --default-artifact-root /mlruns"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    depends_on:
+      - postgres
+    networks:
+      - mlops-net
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: mlflow
+      POSTGRES_DB: mlflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - mlops-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mlflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    networks:
+      - mlops-net
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring/grafana-dashboard.json:/var/lib/grafana/dashboards/mlops.json:ro
+    depends_on:
+      - prometheus
+    networks:
+      - mlops-net
+
+networks:
+  mlops-net:
+    driver: bridge
+
+volumes:
+  pgdata:

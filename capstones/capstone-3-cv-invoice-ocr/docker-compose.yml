@@ -1,0 +1,70 @@
+name: capstone-3-cv-invoice-ocr
+
+services:
+  api:
+    build: .
+    image: capstone-3-cv-invoice-ocr:latest
+    container_name: cv-invoice-ocr-api
+    ports:
+      - "8000:8000"
+    environment:
+      VISION_MLFLOW_TRACKING_URI: http://mlflow:5000
+      VISION_USE_MLFLOW: "true"
+      VISION_BACKEND: dummy
+    volumes:
+      - ./models:/app/models
+      - ./mlruns:/app/mlruns
+    depends_on:
+      - mlflow
+    networks:
+      - cvnet
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.13.0
+    container_name: cv-invoice-ocr-mlflow
+    command: >
+      mlflow server
+      --host 0.0.0.0
+      --port 5000
+      --backend-store-uri /mlruns
+      --default-artifact-root /mlruns
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    networks:
+      - cvnet
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    container_name: cv-invoice-ocr-prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    depends_on:
+      - api
+    networks:
+      - cvnet
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    container_name: cv-invoice-ocr-grafana
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - cvnet
+
+networks:
+  cvnet:
+    driver: bridge

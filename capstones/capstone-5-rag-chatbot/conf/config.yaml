@@ -1,0 +1,37 @@
+# Default configuration consumed by ragbot.config.Settings.
+# Environment variables prefixed with RAGBOT_ override these values.
+
+app_name: rag-chatbot
+log_level: INFO
+random_seed: 42
+
+# corpus / ingestion
+sample_docs_dir: data/sample_docs
+chunk_size: 400
+chunk_overlap: 80
+
+# embeddings: hashing (base dep, default) | sentence-transformers (optional)
+embedder: hashing
+embedding_dim: 512
+st_model_name: sentence-transformers/all-MiniLM-L6-v2
+
+# vector store: memory (base dep, default) | qdrant (optional dep)
+vector_store: memory
+collection: sme_docs
+qdrant_url: http://localhost:6333
+
+# retrieval
+top_k: 4
+hybrid: true
+hybrid_alpha: 0.7
+
+# llm: fake (deterministic, default/tests) | ollama
+llm: fake
+ollama_base_url: http://localhost:11434
+ollama_model: llama3.1
+llm_timeout: 60.0
+max_context_chars: 2000
+
+# api
+api_host: 0.0.0.0
+api_port: 8000

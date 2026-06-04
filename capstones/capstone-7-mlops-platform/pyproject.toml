@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capstone-7-mlops-platform"
+version = "0.1.0"
+description = "End-to-end MLOps platform: orchestration, model registry, serving, monitoring, and infra around a reference tabular model."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "ai-portfolio" }]
+
+dependencies = [
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "pyyaml>=6.0",
+    "prometheus-fastapi-instrumentator>=7.0",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "joblib>=1.4",
+]
+
+[project.optional-dependencies]
+# Optional model registry / tracking backend (lazy-imported).
+mlflow = ["mlflow>=2.13", "psycopg2-binary>=2.9"]
+# Optional orchestration backend (lazy-imported).
+prefect = ["prefect>=2.19"]
+# Optional drift report backend (lazy-imported).
+evidently = ["evidently>=0.4"]
+serve = ["gunicorn>=22.0"]
+dev = [
+    "pytest>=8.2",
+    "httpx>=0.27",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+mlops-pipeline = "mlops.pipeline.__main__:main"
+mlops-registry = "mlops.registry.__main__:main"
+mlops-train = "mlops.train:main"
+mlops-serve = "mlops.serve:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests", "monitoring"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+markers = [
+    "integration: tests requiring network, MLflow/Prefect/Evidently, or heavy optional deps",
+]

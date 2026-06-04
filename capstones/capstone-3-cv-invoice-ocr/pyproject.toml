@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capstone-3-cv-invoice-ocr"
+version = "0.1.0"
+description = "Document image classification (ResNet18 transfer learning) + invoice OCR service."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "AI Portfolio" }]
+dependencies = [
+    "fastapi>=0.111,<1.0",
+    "uvicorn[standard]>=0.30,<1.0",
+    "pydantic>=2.7,<3.0",
+    "pydantic-settings>=2.3,<3.0",
+    "pyyaml>=6.0,<7.0",
+    "numpy>=1.26,<3.0",
+    "pandas>=2.2,<3.0",
+    "scikit-learn>=1.4,<2.0",
+    "joblib>=1.4,<2.0",
+    "Pillow>=10.3,<12.0",
+    "python-multipart>=0.0.9,<1.0",
+    "prometheus-fastapi-instrumentator>=7.0,<8.0",
+]
+
+[project.optional-dependencies]
+ml = [
+    "torch>=2.2,<3.0",
+    "torchvision>=0.17,<1.0",
+    "mlflow>=2.13,<3.0",
+]
+ocr = [
+    "pytesseract>=0.3.10,<1.0",
+    "easyocr>=1.7,<2.0",
+]
+serve = [
+    "uvicorn[standard]>=0.30,<1.0",
+    "httpx>=0.27,<1.0",
+]
+dev = [
+    "pytest>=8.2,<9.0",
+    "httpx>=0.27,<1.0",
+    "ruff>=0.4,<1.0",
+]
+
+[project.scripts]
+vision-train = "vision.train:main"
+vision-predict = "vision.predict:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests", "monitoring"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "T201"]
+ignore = ["B008"]  # FastAPI uses callables in defaults (Depends/File)
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["T201"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+markers = [
+    "integration: tests needing network / heavy models (skipped by default offline)",
+]

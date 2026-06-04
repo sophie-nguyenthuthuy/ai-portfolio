@@ -1,0 +1,66 @@
+name: capstone-2-timeseries-forecast
+
+services:
+  api:
+    build: .
+    image: capstone-2-timeseries-forecast:latest
+    container_name: forecast-api
+    ports:
+      - "8000:8000"
+    environment:
+      FORECAST_MODEL_DIR: /app/models
+      FORECAST_MLFLOW_TRACKING_URI: file:/app/mlruns
+      FORECAST_USE_MLFLOW: "true"
+    volumes:
+      - ./models:/app/models
+      - ./mlruns:/app/mlruns
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks: [forecast-net]
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.11.3
+    container_name: forecast-mlflow
+    command: >
+      mlflow server
+      --host 0.0.0.0 --port 5000
+      --backend-store-uri /mlruns
+      --default-artifact-root /mlruns
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    networks: [forecast-net]
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    container_name: forecast-prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    depends_on: [api]
+    networks: [forecast-net]
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    container_name: forecast-grafana
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring/grafana-dashboard.json:/var/lib/grafana/dashboards/forecast.json:ro
+    depends_on: [prometheus]
+    networks: [forecast-net]
+
+networks:
+  forecast-net:
+    driver: bridge

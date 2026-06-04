@@ -1,0 +1,67 @@
+name: capstone-research-agent
+
+services:
+  api:
+    build: .
+    image: capstone-research-agent:latest
+    ports:
+      - "8000:8000"
+    environment:
+      # Default to the offline FakeLLM. Flip to ollama to use the local model:
+      #   AGENT_LLM_BACKEND=ollama
+      AGENT_LLM_BACKEND: fake
+      AGENT_GRAPH_BACKEND: auto
+      AGENT_OLLAMA_BASE_URL: http://ollama:11434
+      AGENT_OLLAMA_MODEL: llama3.1
+      AGENT_CORPUS_DIR: /app/data/corpus
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - ollama
+    networks:
+      - agent-net
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  ollama:
+    image: ollama/ollama:0.3.12
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    networks:
+      - agent-net
+    # Pull a model after start, e.g.:  docker compose exec ollama ollama pull llama3.1
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    networks:
+      - agent-net
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring/grafana-dashboard.json:/var/lib/grafana/dashboards/agent.json:ro
+    depends_on:
+      - prometheus
+    networks:
+      - agent-net
+
+volumes:
+  ollama-models:
+
+networks:
+  agent-net:
+    driver: bridge

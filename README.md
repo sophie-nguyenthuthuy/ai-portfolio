@@ -44,13 +44,15 @@ section-NN-slug/
 
 ## 7 Capstone Projects (portfolio)
 
-1. **Churn Prediction** — Section 5
-2. **Dự báo doanh số / chứng khoán VN** — Section 6
-3. **Computer Vision thực chiến** (ảnh y tế / OCR hoá đơn) — Section 8
-4. **Sentiment / Chatbot tiếng Việt** — Section 9
-5. **RAG chatbot tài liệu nội bộ cho SME** — Section 12
-6. **Research Agent (LangGraph)** — Section 13
-7. **Pipeline MLOps production đầy đủ** — Section 14
+Mã nguồn **production-grade** đầy đủ trong [`capstones/`](capstones/README.md) — mỗi project có training pipeline + MLflow, FastAPI service (`/health` · `/metrics`), pytest (xanh offline), Docker/compose, Kubernetes, Terraform và CI.
+
+1. **[Churn Prediction](capstones/capstone-1-churn-prediction/)** — Section 5
+2. **[Dự báo doanh số / chứng khoán VN](capstones/capstone-2-timeseries-forecast/)** — Section 6
+3. **[Computer Vision thực chiến](capstones/capstone-3-cv-invoice-ocr/)** (ảnh y tế / OCR hoá đơn) — Section 8
+4. **[Sentiment / Chatbot tiếng Việt](capstones/capstone-4-vietnamese-sentiment/)** — Section 9
+5. **[RAG chatbot tài liệu nội bộ cho SME](capstones/capstone-5-rag-chatbot/)** — Section 12
+6. **[Research Agent (LangGraph)](capstones/capstone-6-research-agent/)** — Section 13
+7. **[Pipeline MLOps production đầy đủ](capstones/capstone-7-mlops-platform/)** — Section 14
 
 ## Practice — Quiz · Coding Exercise · Assignment
 

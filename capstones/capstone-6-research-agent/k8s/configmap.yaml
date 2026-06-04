@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: research-agent-config
+  labels:
+    app: research-agent-api
+data:
+  AGENT_LOG_LEVEL: "INFO"
+  AGENT_GRAPH_BACKEND: "auto"
+  AGENT_LLM_BACKEND: "fake"
+  AGENT_OLLAMA_BASE_URL: "http://ollama:11434"
+  AGENT_OLLAMA_MODEL: "llama3.1"
+  AGENT_CORPUS_DIR: "/app/data/corpus"
+  AGENT_MAX_STEPS: "6"

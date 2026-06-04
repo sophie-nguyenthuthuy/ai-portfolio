@@ -1,0 +1,24 @@
+# Default configuration consumed by churn.config.Settings.
+# Environment variables prefixed with CHURN_ override these values.
+
+app_name: churn-prediction
+log_level: INFO
+
+# data
+data_path: data/telco_churn.csv
+synthetic_rows: 4000
+random_seed: 42
+test_size: 0.2
+
+# model: gradient_boosting | logistic_regression | xgboost (optional dep)
+classifier: gradient_boosting
+model_dir: models
+model_filename: churn-model.joblib
+
+# mlflow
+mlflow_tracking_uri: ./mlruns
+mlflow_experiment: churn-prediction
+
+# api
+api_host: 0.0.0.0
+api_port: 8000

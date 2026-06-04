@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mlops-config
+  labels:
+    app: mlops-api
+data:
+  MLOPS_LOG_LEVEL: "INFO"
+  MLOPS_MODEL_NAME: "churn-reference"
+  MLOPS_CLASSIFIER: "gradient_boosting"
+  MLOPS_PIPELINE_BACKEND: "base"
+  MLOPS_REGISTRY_BACKEND: "local"
+  MLOPS_REGISTRY_DIR: "/app/registry"
+  MLOPS_MLFLOW_TRACKING_URI: "http://mlflow:5000"
+  MLOPS_SYNTHETIC_ROWS: "4000"
+  MLOPS_MIN_ROC_AUC: "0.7"
+  MLOPS_DRIFT_THRESHOLD: "0.25"

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: churn-config
+  labels:
+    app: churn-api
+data:
+  CHURN_LOG_LEVEL: "INFO"
+  CHURN_CLASSIFIER: "gradient_boosting"
+  CHURN_MODEL_DIR: "/app/models"
+  CHURN_MLFLOW_TRACKING_URI: "http://mlflow:5000"
+  CHURN_SYNTHETIC_ROWS: "4000"

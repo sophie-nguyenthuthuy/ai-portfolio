@@ -1,0 +1,77 @@
+name: capstone-7-mlops-platform CD
+
+# Documented build -> push -> deploy template, paths-filtered to this capstone.
+# Pushes to GHCR and (illustratively) rolls out to a Kubernetes cluster. The
+# deploy job is gated on a `production` environment and only runs on main, so it
+# is safe to keep in the repo as a reference pipeline.
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "capstones/capstone-7-mlops-platform/**"
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: capstones/capstone-7-mlops-platform
+
+env:
+  IMAGE: ghcr.io/${{ github.repository }}/capstone-mlops
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image_tag: ${{ steps.meta.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compute image tag
+        id: meta
+        run: echo "tag=${GITHUB_SHA::12}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: capstones/capstone-7-mlops-platform
+          push: true
+          tags: |
+            ${{ env.IMAGE }}:latest
+            ${{ env.IMAGE }}:${{ steps.meta.outputs.tag }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-push
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: Render kubeconfig
+        run: |
+          mkdir -p "$HOME/.kube"
+          echo "${{ secrets.KUBECONFIG }}" > "$HOME/.kube/config"
+
+      - name: Deploy manifests
+        run: |
+          kubectl apply -f k8s/configmap.yaml
+          kubectl set image deployment/mlops-api \
+            api=${{ env.IMAGE }}:${{ needs.build-push.outputs.image_tag }}
+          kubectl apply -f k8s/service.yaml -f k8s/hpa.yaml -f k8s/cronjob.yaml
+          kubectl rollout status deployment/mlops-api --timeout=120s

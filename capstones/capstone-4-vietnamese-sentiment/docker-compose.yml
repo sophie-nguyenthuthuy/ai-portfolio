@@ -1,0 +1,54 @@
+services:
+  api:
+    build: .
+    image: capstone-4-vietnamese-sentiment:latest
+    container_name: nlpvi-api
+    ports:
+      - "8000:8000"
+    environment:
+      NLPVI_LOG_LEVEL: INFO
+      NLPVI_MODEL_BACKEND: sklearn
+      NLPVI_MLFLOW_ENABLED: "true"
+      NLPVI_MLFLOW_TRACKING_URI: file:/app/mlruns
+    volumes:
+      - ./models:/app/models
+      - ./mlruns:/app/mlruns
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status==200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    networks:
+      - nlpvi-net
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: nlpvi-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - api
+    networks:
+      - nlpvi-net
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    container_name: nlpvi-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+    volumes:
+      - ./monitoring/grafana-dashboard.json:/var/lib/grafana/dashboards/nlpvi.json:ro
+    depends_on:
+      - prometheus
+    networks:
+      - nlpvi-net
+
+networks:
+  nlpvi-net:
+    driver: bridge

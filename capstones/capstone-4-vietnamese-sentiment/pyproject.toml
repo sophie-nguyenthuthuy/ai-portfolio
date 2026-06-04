@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capstone-4-vietnamese-sentiment"
+version = "0.1.0"
+description = "Vietnamese product-review sentiment analysis (TF-IDF+LR / PhoBERT)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "ai-portfolio" }]
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "pyyaml>=6.0",
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scikit-learn>=1.4",
+    "joblib>=1.3",
+    "prometheus-fastapi-instrumentator>=7.0",
+]
+
+[project.optional-dependencies]
+ml = [
+    "transformers>=4.40",
+    "torch>=2.2",
+    "underthesea>=6.7",
+    "mlflow>=2.12",
+]
+serve = [
+    "gunicorn>=21.2",
+]
+dev = [
+    "pytest>=8.0",
+    "httpx>=0.27",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+nlpvi-train = "nlpvi.train:main"
+nlpvi-predict = "nlpvi.predict:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+markers = [
+    "integration: tests needing network or heavy models (skipped by default)",
+]

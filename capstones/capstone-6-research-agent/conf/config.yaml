@@ -1,0 +1,24 @@
+# Default configuration consumed by agent.config.Settings.
+# Env vars with the AGENT_ prefix override any of these.
+
+app_name: research-agent
+log_level: INFO
+
+# agent loop
+max_steps: 6
+graph_backend: auto        # auto | langgraph | simple
+
+# llm
+llm_backend: fake          # fake | ollama
+ollama_base_url: http://localhost:11434
+ollama_model: llama3.1
+llm_timeout_s: 30.0
+
+# tools
+search_backend: fake       # fake | tavily
+corpus_dir: data/corpus
+retriever_top_k: 3
+
+# api
+api_host: 0.0.0.0
+api_port: 8000

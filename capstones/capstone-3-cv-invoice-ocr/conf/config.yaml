@@ -1,0 +1,38 @@
+# Default configuration consumed by vision.config.Settings.
+# Env vars (prefix VISION_) override any value here.
+
+# data
+data_path: data/documents
+labels:
+  - invoice
+  - receipt
+  - id_card
+  - other
+samples_per_class: 24
+seed: 42
+
+# image preprocessing
+image_size: 64
+resnet_size: 224
+
+# training
+backend: auto            # auto | torch | dummy
+epochs: 3
+batch_size: 8
+learning_rate: 0.001
+test_fraction: 0.25
+
+# ocr
+ocr_engine: auto         # auto | pytesseract | easyocr | stub
+ocr_lang: eng
+
+# artifacts / tracking
+model_dir: models
+mlflow_tracking_uri: file:./mlruns
+mlflow_experiment: cv-invoice-ocr
+use_mlflow: true
+
+# service
+app_name: cv-invoice-ocr
+log_level: INFO
+max_upload_bytes: 8388608

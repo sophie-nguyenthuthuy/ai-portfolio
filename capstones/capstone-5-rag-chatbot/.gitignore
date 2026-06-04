@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Project artifacts
+data/*
+!data/.gitkeep
+!data/sample_docs/
+models/*
+!models/.gitkeep
+qdrant_storage/
+*.qdrant
+
+# Env / IDE
+.env
+.DS_Store
+.idea/
+.vscode/

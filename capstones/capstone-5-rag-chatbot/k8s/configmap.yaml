@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rag-config
+  labels:
+    app: rag-api
+data:
+  RAGBOT_LOG_LEVEL: "INFO"
+  RAGBOT_EMBEDDER: "hashing"
+  RAGBOT_VECTOR_STORE: "memory"
+  RAGBOT_LLM: "fake"
+  RAGBOT_TOP_K: "4"
+  RAGBOT_SAMPLE_DOCS_DIR: "/app/data/sample_docs"
